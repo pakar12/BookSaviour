@@ -1,0 +1,602 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4CE2565555300C691B6 /* AppDelegate.swift */; };
+		1590B4D12565555300C691B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4D02565555300C691B6 /* ViewController.swift */; };
+		1590B4D42565555300C691B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4D22565555300C691B6 /* Main.storyboard */; };
+		1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4D52565555300C691B6 /* DefensaCD.xcdatamodeld */; };
+		1590B4D92565555500C691B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4D82565555500C691B6 /* Assets.xcassets */; };
+		1590B4DC2565555500C691B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4DA2565555500C691B6 /* LaunchScreen.storyboard */; };
+		1590B4E72565555600C691B6 /* DefensaCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4E62565555600C691B6 /* DefensaCDTests.swift */; };
+		1590B4F22565555600C691B6 /* DefensaCDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4F12565555600C691B6 /* DefensaCDUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1590B4E32565555600C691B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1590B4C32565555300C691B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1590B4CA2565555300C691B6;
+			remoteInfo = DefensaCD;
+		};
+		1590B4EE2565555600C691B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1590B4C32565555300C691B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1590B4CA2565555300C691B6;
+			remoteInfo = DefensaCD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1590B4CB2565555300C691B6 /* DefensaCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefensaCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1590B4CE2565555300C691B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1590B4D02565555300C691B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1590B4D32565555300C691B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1590B4D62565555300C691B6 /* DefensaCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefensaCD.xcdatamodel; sourceTree = "<group>"; };
+		1590B4D82565555500C691B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1590B4DB2565555500C691B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1590B4DD2565555500C691B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1590B4E22565555600C691B6 /* DefensaCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefensaCDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1590B4E62565555600C691B6 /* DefensaCDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefensaCDTests.swift; sourceTree = "<group>"; };
+		1590B4E82565555600C691B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1590B4ED2565555600C691B6 /* DefensaCDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefensaCDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1590B4F12565555600C691B6 /* DefensaCDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefensaCDUITests.swift; sourceTree = "<group>"; };
+		1590B4F32565555600C691B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1590B4C82565555300C691B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1590B4DF2565555600C691B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1590B4EA2565555600C691B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1590B4C22565555300C691B6 = {
+			isa = PBXGroup;
+			children = (
+				1590B4CD2565555300C691B6 /* DefensaCD */,
+				1590B4E52565555600C691B6 /* DefensaCDTests */,
+				1590B4F02565555600C691B6 /* DefensaCDUITests */,
+				1590B4CC2565555300C691B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1590B4CC2565555300C691B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1590B4CB2565555300C691B6 /* DefensaCD.app */,
+				1590B4E22565555600C691B6 /* DefensaCDTests.xctest */,
+				1590B4ED2565555600C691B6 /* DefensaCDUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1590B4CD2565555300C691B6 /* DefensaCD */ = {
+			isa = PBXGroup;
+			children = (
+				1590B4CE2565555300C691B6 /* AppDelegate.swift */,
+				1590B4D02565555300C691B6 /* ViewController.swift */,
+				1590B4D22565555300C691B6 /* Main.storyboard */,
+				1590B4D82565555500C691B6 /* Assets.xcassets */,
+				1590B4DA2565555500C691B6 /* LaunchScreen.storyboard */,
+				1590B4DD2565555500C691B6 /* Info.plist */,
+				1590B4D52565555300C691B6 /* DefensaCD.xcdatamodeld */,
+			);
+			path = DefensaCD;
+			sourceTree = "<group>";
+		};
+		1590B4E52565555600C691B6 /* DefensaCDTests */ = {
+			isa = PBXGroup;
+			children = (
+				1590B4E62565555600C691B6 /* DefensaCDTests.swift */,
+				1590B4E82565555600C691B6 /* Info.plist */,
+			);
+			path = DefensaCDTests;
+			sourceTree = "<group>";
+		};
+		1590B4F02565555600C691B6 /* DefensaCDUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1590B4F12565555600C691B6 /* DefensaCDUITests.swift */,
+				1590B4F32565555600C691B6 /* Info.plist */,
+			);
+			path = DefensaCDUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1590B4CA2565555300C691B6 /* DefensaCD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1590B4F62565555600C691B6 /* Build configuration list for PBXNativeTarget "DefensaCD" */;
+			buildPhases = (
+				1590B4C72565555300C691B6 /* Sources */,
+				1590B4C82565555300C691B6 /* Frameworks */,
+				1590B4C92565555300C691B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DefensaCD;
+			productName = DefensaCD;
+			productReference = 1590B4CB2565555300C691B6 /* DefensaCD.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1590B4E12565555600C691B6 /* DefensaCDTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1590B4F92565555600C691B6 /* Build configuration list for PBXNativeTarget "DefensaCDTests" */;
+			buildPhases = (
+				1590B4DE2565555600C691B6 /* Sources */,
+				1590B4DF2565555600C691B6 /* Frameworks */,
+				1590B4E02565555600C691B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1590B4E42565555600C691B6 /* PBXTargetDependency */,
+			);
+			name = DefensaCDTests;
+			productName = DefensaCDTests;
+			productReference = 1590B4E22565555600C691B6 /* DefensaCDTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1590B4EC2565555600C691B6 /* DefensaCDUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1590B4FC2565555600C691B6 /* Build configuration list for PBXNativeTarget "DefensaCDUITests" */;
+			buildPhases = (
+				1590B4E92565555600C691B6 /* Sources */,
+				1590B4EA2565555600C691B6 /* Frameworks */,
+				1590B4EB2565555600C691B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1590B4EF2565555600C691B6 /* PBXTargetDependency */,
+			);
+			name = DefensaCDUITests;
+			productName = DefensaCDUITests;
+			productReference = 1590B4ED2565555600C691B6 /* DefensaCDUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1590B4C32565555300C691B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = ual;
+				TargetAttributes = {
+					1590B4CA2565555300C691B6 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1590B4E12565555600C691B6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1590B4CA2565555300C691B6;
+					};
+					1590B4EC2565555600C691B6 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 1590B4CA2565555300C691B6;
+					};
+				};
+			};
+			buildConfigurationList = 1590B4C62565555300C691B6 /* Build configuration list for PBXProject "DefensaCD" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1590B4C22565555300C691B6;
+			productRefGroup = 1590B4CC2565555300C691B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1590B4CA2565555300C691B6 /* DefensaCD */,
+				1590B4E12565555600C691B6 /* DefensaCDTests */,
+				1590B4EC2565555600C691B6 /* DefensaCDUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1590B4C92565555300C691B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1590B4DC2565555500C691B6 /* LaunchScreen.storyboard in Resources */,
+				1590B4D92565555500C691B6 /* Assets.xcassets in Resources */,
+				1590B4D42565555300C691B6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1590B4E02565555600C691B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1590B4EB2565555600C691B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1590B4C72565555300C691B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1590B4D12565555300C691B6 /* ViewController.swift in Sources */,
+				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
+				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1590B4DE2565555600C691B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1590B4E72565555600C691B6 /* DefensaCDTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1590B4E92565555600C691B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1590B4F22565555600C691B6 /* DefensaCDUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1590B4E42565555600C691B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1590B4CA2565555300C691B6 /* DefensaCD */;
+			targetProxy = 1590B4E32565555600C691B6 /* PBXContainerItemProxy */;
+		};
+		1590B4EF2565555600C691B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1590B4CA2565555300C691B6 /* DefensaCD */;
+			targetProxy = 1590B4EE2565555600C691B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1590B4D22565555300C691B6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1590B4D32565555300C691B6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1590B4DA2565555500C691B6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1590B4DB2565555500C691B6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1590B4F42565555600C691B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1590B4F52565555600C691B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1590B4F72565555600C691B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DefensaCD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.DefensaCD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1590B4F82565555600C691B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DefensaCD/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.DefensaCD;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1590B4FA2565555600C691B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DefensaCDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.DefensaCDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DefensaCD.app/DefensaCD";
+			};
+			name = Debug;
+		};
+		1590B4FB2565555600C691B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DefensaCDTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.DefensaCDTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DefensaCD.app/DefensaCD";
+			};
+			name = Release;
+		};
+		1590B4FD2565555600C691B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DefensaCDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.DefensaCDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DefensaCD;
+			};
+			name = Debug;
+		};
+		1590B4FE2565555600C691B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DefensaCDUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ual.DefensaCDUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DefensaCD;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1590B4C62565555300C691B6 /* Build configuration list for PBXProject "DefensaCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1590B4F42565555600C691B6 /* Debug */,
+				1590B4F52565555600C691B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1590B4F62565555600C691B6 /* Build configuration list for PBXNativeTarget "DefensaCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1590B4F72565555600C691B6 /* Debug */,
+				1590B4F82565555600C691B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1590B4F92565555600C691B6 /* Build configuration list for PBXNativeTarget "DefensaCDTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1590B4FA2565555600C691B6 /* Debug */,
+				1590B4FB2565555600C691B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1590B4FC2565555600C691B6 /* Build configuration list for PBXNativeTarget "DefensaCDUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1590B4FD2565555600C691B6 /* Debug */,
+				1590B4FE2565555600C691B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1590B4D52565555300C691B6 /* DefensaCD.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1590B4D62565555300C691B6 /* DefensaCD.xcdatamodel */,
+			);
+			currentVersion = 1590B4D62565555300C691B6 /* DefensaCD.xcdatamodel */;
+			path = DefensaCD.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1590B4C32565555300C691B6 /* Project object */;
+}
