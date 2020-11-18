@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4CE2565555300C691B6 /* AppDelegate.swift */; };
-		1590B4D12565555300C691B6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4D02565555300C691B6 /* ViewController.swift */; };
+		1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4D02565555300C691B6 /* LoginViewController.swift */; };
 		1590B4D42565555300C691B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4D22565555300C691B6 /* Main.storyboard */; };
 		1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4D52565555300C691B6 /* DefensaCD.xcdatamodeld */; };
 		1590B4D92565555500C691B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4D82565555500C691B6 /* Assets.xcassets */; };
 		1590B4DC2565555500C691B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4DA2565555500C691B6 /* LaunchScreen.storyboard */; };
 		1590B4E72565555600C691B6 /* DefensaCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4E62565555600C691B6 /* DefensaCDTests.swift */; };
 		1590B4F22565555600C691B6 /* DefensaCDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4F12565555600C691B6 /* DefensaCDUITests.swift */; };
+		1590B5022565612A00C691B6 /* ListaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4FF2565612900C691B6 /* ListaTableViewController.swift */; };
+		1590B5032565612A00C691B6 /* DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B5002565612900C691B6 /* DetallesViewController.swift */; };
+		1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B5012565612900C691B6 /* LeerViewController.swift */; };
+		1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */; };
+		15FDD0112565BC3800226D7B /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDD0102565BC3800226D7B /* Libro.swift */; };
+		15FDD0132565BD1E00226D7B /* Autor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDD0122565BD1E00226D7B /* Autor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,7 @@
 /* Begin PBXFileReference section */
 		1590B4CB2565555300C691B6 /* DefensaCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefensaCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1590B4CE2565555300C691B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1590B4D02565555300C691B6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1590B4D02565555300C691B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1590B4D32565555300C691B6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1590B4D62565555300C691B6 /* DefensaCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DefensaCD.xcdatamodel; sourceTree = "<group>"; };
 		1590B4D82565555500C691B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +55,12 @@
 		1590B4ED2565555600C691B6 /* DefensaCDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DefensaCDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1590B4F12565555600C691B6 /* DefensaCDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefensaCDUITests.swift; sourceTree = "<group>"; };
 		1590B4F32565555600C691B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1590B4FF2565612900C691B6 /* ListaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaTableViewController.swift; sourceTree = "<group>"; };
+		1590B5002565612900C691B6 /* DetallesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetallesViewController.swift; sourceTree = "<group>"; };
+		1590B5012565612900C691B6 /* LeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeerViewController.swift; sourceTree = "<group>"; };
+		1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
+		15FDD0102565BC3800226D7B /* Libro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
+		15FDD0122565BD1E00226D7B /* Autor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,8 @@
 			isa = PBXGroup;
 			children = (
 				1590B4CD2565555300C691B6 /* DefensaCD */,
+				15FDD00E2565BBCF00226D7B /* ViewController */,
+				15FDD00F2565BC0000226D7B /* Class */,
 				1590B4E52565555600C691B6 /* DefensaCDTests */,
 				1590B4F02565555600C691B6 /* DefensaCDUITests */,
 				1590B4CC2565555300C691B6 /* Products */,
@@ -100,7 +114,6 @@
 			isa = PBXGroup;
 			children = (
 				1590B4CE2565555300C691B6 /* AppDelegate.swift */,
-				1590B4D02565555300C691B6 /* ViewController.swift */,
 				1590B4D22565555300C691B6 /* Main.storyboard */,
 				1590B4D82565555500C691B6 /* Assets.xcassets */,
 				1590B4DA2565555500C691B6 /* LaunchScreen.storyboard */,
@@ -126,6 +139,27 @@
 				1590B4F32565555600C691B6 /* Info.plist */,
 			);
 			path = DefensaCDUITests;
+			sourceTree = "<group>";
+		};
+		15FDD00E2565BBCF00226D7B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */,
+				1590B5002565612900C691B6 /* DetallesViewController.swift */,
+				1590B5012565612900C691B6 /* LeerViewController.swift */,
+				1590B4FF2565612900C691B6 /* ListaTableViewController.swift */,
+				1590B4D02565555300C691B6 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		15FDD00F2565BC0000226D7B /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				15FDD0102565BC3800226D7B /* Libro.swift */,
+				15FDD0122565BD1E00226D7B /* Autor.swift */,
+			);
+			path = Class;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1590B4D12565555300C691B6 /* ViewController.swift in Sources */,
+				1590B5022565612A00C691B6 /* ListaTableViewController.swift in Sources */,
+				1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */,
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
+				15FDD0132565BD1E00226D7B /* Autor.swift in Sources */,
+				1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */,
+				1590B5032565612A00C691B6 /* DetallesViewController.swift in Sources */,
+				15FDD0112565BC3800226D7B /* Libro.swift in Sources */,
+				1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
