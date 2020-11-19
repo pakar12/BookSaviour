@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		153F7F442566A0F4009543E4 /* ResumenLibro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153F7F432566A0F4009543E4 /* ResumenLibro.xib */; };
+		153F7F482566A274009543E4 /* ResumenLibroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F7F472566A274009543E4 /* ResumenLibroView.swift */; };
 		1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4CE2565555300C691B6 /* AppDelegate.swift */; };
 		1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4D02565555300C691B6 /* LoginViewController.swift */; };
 		1590B4D42565555300C691B6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1590B4D22565555300C691B6 /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		153F7F432566A0F4009543E4 /* ResumenLibro.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumenLibro.xib; sourceTree = "<group>"; };
+		153F7F472566A274009543E4 /* ResumenLibroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenLibroView.swift; sourceTree = "<group>"; };
 		1590B4CB2565555300C691B6 /* DefensaCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefensaCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1590B4CE2565555300C691B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1590B4D02565555300C691B6 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -88,10 +92,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		153F7F3E25669BBA009543E4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				153F7F432566A0F4009543E4 /* ResumenLibro.xib */,
+				153F7F472566A274009543E4 /* ResumenLibroView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		1590B4C22565555300C691B6 = {
 			isa = PBXGroup;
 			children = (
 				1590B4CD2565555300C691B6 /* DefensaCD */,
+				153F7F3E25669BBA009543E4 /* View */,
 				15FDD00E2565BBCF00226D7B /* ViewController */,
 				15FDD00F2565BC0000226D7B /* Class */,
 				1590B4E52565555600C691B6 /* DefensaCDTests */,
@@ -268,6 +282,7 @@
 			files = (
 				1590B4DC2565555500C691B6 /* LaunchScreen.storyboard in Resources */,
 				1590B4D92565555500C691B6 /* Assets.xcassets in Resources */,
+				153F7F442566A0F4009543E4 /* ResumenLibro.xib in Resources */,
 				1590B4D42565555300C691B6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +311,7 @@
 				1590B5022565612A00C691B6 /* ListaTableViewController.swift in Sources */,
 				1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */,
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
+				153F7F482566A274009543E4 /* ResumenLibroView.swift in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
 				15FDD0132565BD1E00226D7B /* Autor.swift in Sources */,
 				1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */,
