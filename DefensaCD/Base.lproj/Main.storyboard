@@ -110,6 +110,7 @@
         <!--Lista Table View Controller-->
         <scene sceneID="pfD-se-leN">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IKc-Bl-ZHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tableViewController id="UUG-Kh-nqD" customClass="ListaTableViewController" customModule="DefensaCD" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NrZ-JF-JlH" customClass="lista">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -132,7 +133,7 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="104" id="yvR-I2-g3e">
                                 <rect key="frame" x="0.0" y="72" width="375" height="104"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvR-I2-g3e" id="77v-mu-HYt" customClass="ResumenLibroView" customModule="DefensaCD" customModuleProvider="target">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvR-I2-g3e" id="77v-mu-HYt">
                                     <rect key="frame" x="0.0" y="0.0" width="341" height="103.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -150,7 +151,6 @@
                         </connections>
                     </tableView>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IKc-Bl-ZHp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="951.20000000000005" y="128.18590704647679"/>
         </scene>
