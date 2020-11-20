@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		15093294256736A700912296 /* TableViewResumen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15093293256736A700912296 /* TableViewResumen.swift */; };
 		153F7F442566A0F4009543E4 /* ResumenLibro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153F7F432566A0F4009543E4 /* ResumenLibro.xib */; };
 		153F7F482566A274009543E4 /* ResumenLibroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F7F472566A274009543E4 /* ResumenLibroView.swift */; };
 		1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B4CE2565555300C691B6 /* AppDelegate.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15093293256736A700912296 /* TableViewResumen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewResumen.swift; sourceTree = "<group>"; };
 		153F7F432566A0F4009543E4 /* ResumenLibro.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumenLibro.xib; sourceTree = "<group>"; };
 		153F7F472566A274009543E4 /* ResumenLibroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenLibroView.swift; sourceTree = "<group>"; };
 		1590B4CB2565555300C691B6 /* DefensaCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DefensaCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -163,6 +165,7 @@
 				1590B5012565612900C691B6 /* LeerViewController.swift */,
 				1590B4FF2565612900C691B6 /* ListaTableViewController.swift */,
 				1590B4D02565555300C691B6 /* LoginViewController.swift */,
+				15093293256736A700912296 /* TableViewResumen.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
 				15FDD0132565BD1E00226D7B /* Autor.swift in Sources */,
 				1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */,
+				15093294256736A700912296 /* TableViewResumen.swift in Sources */,
 				1590B5032565612A00C691B6 /* DetallesViewController.swift in Sources */,
 				15FDD0112565BC3800226D7B /* Libro.swift in Sources */,
 				1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */,
