@@ -12,13 +12,13 @@ class Autor{
     
     var nombre: String
     var foto: UIImage?
-    var libros: [Libro]
+    var libros: [Libro]?
     var cantidadPublicaciones: Int
     
-    init?(nombre: String, foto: UIImage?, libros: [Libro]){
+    init?(nombre: String, foto: UIImage?, libros: [Libro]?){
         self.nombre = nombre
         self.foto = foto
-        cantidadPublicaciones = libros.count
+        cantidadPublicaciones = libros?.count ?? 0
         self.libros = libros
     }
     

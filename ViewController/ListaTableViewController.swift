@@ -17,20 +17,24 @@ class ListaTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.rowHeight = 103.5
         tableView.estimatedRowHeight = 103.5
+        var  listaCapitulos = [Capitulo]()
         
-        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ P", notaMedia: 5.0)
+        let JJ = Autor(nombre: "El desafortunado JJ", foto: UIImage(named: "visto")!, libros: nil)
         
-        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "Pitagoran't", notaMedia: 5.0)
+        let capitulo = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         
-        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "Rockyoursummer", notaMedia: 3.0)
+        listaCapitulos += [capitulo!]
+        
+        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: JJ!, notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        
+        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: JJ!, notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        
+        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: JJ!, notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
         
         libros += [libro1!, libro2!, libro3!]
     }
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
+
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
@@ -42,11 +46,17 @@ class ListaTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Resumen", for: indexPath) as! TableViewCellResumen
         
         cell.resumen.nombre.text = libros[indexPath.row].nombre
-        cell.resumen.Autor.text = libros[indexPath.row].autor
+        cell.resumen.Autor.text = libros[indexPath.row].autor.nombre
         cell.resumen.foto.image = libros[indexPath.row].foto
         //cell.resumen.Autor.text = libros[indexPath.row].autor
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewDestiny = segue.destination as! LibroViewController
+        let selectedRow = tableView.indexPath(for: sender as! TableViewCellResumen)?.row
+        viewDestiny.libro = libros[selectedRow!]
     }
 }
 

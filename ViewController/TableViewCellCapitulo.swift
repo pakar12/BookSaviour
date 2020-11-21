@@ -10,7 +10,9 @@ import UIKit
 
 class TableViewCellCapitulo: UITableViewCell {
     
-    @IBOutlet weak var resumen: ResumenLibroView!
+    
+    
+    @IBOutlet weak var capitulo: ResumenCapituloView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
