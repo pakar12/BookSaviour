@@ -129,18 +129,18 @@
                             </items>
                         </navigationBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Resumen" rowHeight="104" id="yvR-I2-g3e" customClass="TableViewCellResumen" customModule="DefensaCD" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="72" width="375" height="104"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Resumen" rowHeight="105" id="yvR-I2-g3e" customClass="TableViewCellResumen" customModule="DefensaCD" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="375" height="105"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvR-I2-g3e" id="77v-mu-HYt" customClass="ResumenLibroView" customModule="DefensaCD" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="341" height="103.5"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yvR-I2-g3e" id="77v-mu-HYt">
+                                    <rect key="frame" x="0.0" y="0.0" width="341" height="104.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="42C-YE-GZg" customClass="ResumenLibroView" customModule="DefensaCD">
-                                            <rect key="frame" x="0.0" y="0.0" width="341" height="103.5"/>
+                                        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="42C-YE-GZg" customClass="ResumenLibroView" customModule="DefensaCD">
+                                            <rect key="frame" x="0.0" y="0.5" width="341" height="104"/>
                                             <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="103.5" id="55E-m1-bfg"/>
+                                                <constraint firstAttribute="height" constant="104" id="55E-m1-bfg"/>
                                                 <constraint firstAttribute="width" constant="341" id="LJr-V3-BOP"/>
                                             </constraints>
                                         </view>
@@ -148,10 +148,8 @@
                                     <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <color key="tintColor" red="0.94117647059999998" green="1" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="42C-YE-GZg" secondAttribute="trailing" id="Iy1-F4-CZf"/>
-                                        <constraint firstItem="42C-YE-GZg" firstAttribute="top" secondItem="77v-mu-HYt" secondAttribute="top" id="MnD-9D-NOC"/>
-                                        <constraint firstItem="42C-YE-GZg" firstAttribute="leading" secondItem="77v-mu-HYt" secondAttribute="leading" id="Rln-LV-Wuq"/>
-                                        <constraint firstAttribute="bottom" secondItem="42C-YE-GZg" secondAttribute="bottom" id="WHb-H5-w01"/>
+                                        <constraint firstItem="42C-YE-GZg" firstAttribute="centerY" secondItem="77v-mu-HYt" secondAttribute="centerY" id="36F-NF-GTB"/>
+                                        <constraint firstItem="42C-YE-GZg" firstAttribute="centerX" secondItem="77v-mu-HYt" secondAttribute="centerX" id="wl0-F1-CSw"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

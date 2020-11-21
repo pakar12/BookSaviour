@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResumenCapituloView" customModule="DefensaCD" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="KRx-fs-c5h" id="S9t-vD-FL0"/>
+                <outlet property="estado" destination="KI8-ce-XyD" id="0Do-YJ-8Nt"/>
+                <outlet property="nombreCapitulo" destination="fO4-B8-SPs" id="QO4-i8-Wd2"/>
+                <outlet property="numeroCapitulo" destination="6xP-k7-Sqb" id="Pcg-4O-TLR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <stackView opaque="NO" contentMode="scaleToFill" id="KRx-fs-c5h">
+            <rect key="frame" x="0.0" y="0.0" width="341" height="46"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="tbn-ar-UVL">
+                    <rect key="frame" x="0.0" y="0.0" width="30" height="46"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="p1c-2i-JdJ">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="46"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sm5-h4-7Yy">
+                                    <rect key="frame" x="0.0" y="0.0" width="30" height="8"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="8" id="Ik2-nI-7Fl"/>
+                                    </constraints>
+                                </stackView>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KI8-ce-XyD">
+                                    <rect key="frame" x="0.0" y="8" width="30" height="30"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="flR-XM-ncb">
+                                    <rect key="frame" x="0.0" y="38" width="30" height="8"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="8" id="Kgz-z1-Pbi"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="30" id="ddF-ux-qxG"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="cAK-Jn-IJq"/>
+                    </constraints>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Capítulo 0000:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xP-k7-Sqb" userLabel="Numero">
+                    <rect key="frame" x="30" y="0.0" width="120" height="46"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="QPm-oq-q4d"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fO4-B8-SPs">
+                    <rect key="frame" x="150" y="0.0" width="191" height="46"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.30196078430000001" green="0.30196078430000001" blue="0.30196078430000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="tintColor" red="0.93952661749999999" green="0.99843806030000004" blue="0.98424905539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <viewLayoutGuide key="safeArea" id="GCf-x6-r48"/>
+            <point key="canvasLocation" x="701.60000000000002" y="122.33883058470765"/>
+        </stackView>
+    </objects>
+</document>

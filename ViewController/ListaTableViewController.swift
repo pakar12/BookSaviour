@@ -15,6 +15,8 @@ class ListaTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.rowHeight = 103.5
+        tableView.estimatedRowHeight = 103.5
         
         let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ P", notaMedia: 5.0)
         
