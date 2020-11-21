@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewResumen: UITableViewCell {
+class TableViewCellResumen: UITableViewCell {
 
     @IBOutlet weak var resumen: ResumenLibroView!
     

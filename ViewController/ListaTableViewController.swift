@@ -37,7 +37,7 @@ class ListaTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Resumen", for: indexPath) as! TableViewResumen
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Resumen", for: indexPath) as! TableViewCellResumen
         
         cell.resumen.nombre.text = libros[indexPath.row].nombre
         cell.resumen.Autor.text = libros[indexPath.row].autor
