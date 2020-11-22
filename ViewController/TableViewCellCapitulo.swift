@@ -10,9 +10,13 @@ import UIKit
 
 class TableViewCellCapitulo: UITableViewCell {
     
+
     
+    @IBOutlet weak var estado: UIImageView!
     
-    @IBOutlet weak var capitulo: ResumenCapituloView!
+    @IBOutlet weak var nombre: UILabel!
+    
+    @IBOutlet weak var numero: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

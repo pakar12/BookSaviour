@@ -18,9 +18,9 @@ class Capitulo{
     init?(nombre: String, estado: Bool, imagenes: [UIImage]!, numero: Int){
         self.nombre = nombre
         if(estado == false){
-            self.estado = UIImage(named: "no-visto")
+            self.estado = UIImage(named: "no-visto")!
         }else{
-            self.estado = UIImage(named: "visto")
+            self.estado = UIImage(named: "visto")!
         }
         
         self.imagenes = imagenes

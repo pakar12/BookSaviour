@@ -8,7 +8,7 @@
 
 import UIKit
 
-class Autor{
+class Autor: NSObject{
     
     var nombre: String
     var foto: UIImage?

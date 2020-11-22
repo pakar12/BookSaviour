@@ -8,10 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		15093294256736A700912296 /* TableViewCellResumen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15093293256736A700912296 /* TableViewCellResumen.swift */; };
-		153E8C8C2569389400C73120 /* ResumenCapitulo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153E8C8A2569389300C73120 /* ResumenCapitulo.xib */; };
-		153E8C8D2569389400C73120 /* ResumenCapituloView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E8C8B2569389300C73120 /* ResumenCapituloView.swift */; };
 		153E8C8F25693C7300C73120 /* TableViewCellCapitulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E8C8E25693C7300C73120 /* TableViewCellCapitulo.swift */; };
-		153E8C9125696BBB00C73120 /* LibroTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E8C9025696BBB00C73120 /* LibroTableViewController.swift */; };
 		153E8C9325696CC000C73120 /* Capitulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E8C9225696CC000C73120 /* Capitulo.swift */; };
 		153F7F442566A0F4009543E4 /* ResumenLibro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153F7F432566A0F4009543E4 /* ResumenLibro.xib */; };
 		153F7F482566A274009543E4 /* ResumenLibroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153F7F472566A274009543E4 /* ResumenLibroView.swift */; };
@@ -50,10 +47,7 @@
 
 /* Begin PBXFileReference section */
 		15093293256736A700912296 /* TableViewCellResumen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellResumen.swift; sourceTree = "<group>"; };
-		153E8C8A2569389300C73120 /* ResumenCapitulo.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResumenCapitulo.xib; sourceTree = "<group>"; };
-		153E8C8B2569389300C73120 /* ResumenCapituloView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumenCapituloView.swift; sourceTree = "<group>"; };
 		153E8C8E25693C7300C73120 /* TableViewCellCapitulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCapitulo.swift; sourceTree = "<group>"; };
-		153E8C9025696BBB00C73120 /* LibroTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroTableViewController.swift; sourceTree = "<group>"; };
 		153E8C9225696CC000C73120 /* Capitulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capitulo.swift; sourceTree = "<group>"; };
 		153F7F432566A0F4009543E4 /* ResumenLibro.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResumenLibro.xib; sourceTree = "<group>"; };
 		153F7F472566A274009543E4 /* ResumenLibroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResumenLibroView.swift; sourceTree = "<group>"; };
@@ -107,8 +101,6 @@
 		153F7F3E25669BBA009543E4 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				153E8C8A2569389300C73120 /* ResumenCapitulo.xib */,
-				153E8C8B2569389300C73120 /* ResumenCapituloView.swift */,
 				153F7F432566A0F4009543E4 /* ResumenLibro.xib */,
 				153F7F472566A274009543E4 /* ResumenLibroView.swift */,
 			);
@@ -173,7 +165,6 @@
 			isa = PBXGroup;
 			children = (
 				1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */,
-				153E8C9025696BBB00C73120 /* LibroTableViewController.swift */,
 				1590B5002565612900C691B6 /* LibroViewController.swift */,
 				1590B5012565612900C691B6 /* LeerViewController.swift */,
 				1590B4FF2565612900C691B6 /* ListaTableViewController.swift */,
@@ -300,7 +291,6 @@
 			files = (
 				1590B4DC2565555500C691B6 /* LaunchScreen.storyboard in Resources */,
 				1590B4D92565555500C691B6 /* Assets.xcassets in Resources */,
-				153E8C8C2569389400C73120 /* ResumenCapitulo.xib in Resources */,
 				153F7F442566A0F4009543E4 /* ResumenLibro.xib in Resources */,
 				1590B4D42565555300C691B6 /* Main.storyboard in Resources */,
 			);
@@ -330,9 +320,7 @@
 				1590B5022565612A00C691B6 /* ListaTableViewController.swift in Sources */,
 				153E8C9325696CC000C73120 /* Capitulo.swift in Sources */,
 				1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */,
-				153E8C9125696BBB00C73120 /* LibroTableViewController.swift in Sources */,
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
-				153E8C8D2569389400C73120 /* ResumenCapituloView.swift in Sources */,
 				153F7F482566A274009543E4 /* ResumenLibroView.swift in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
 				15FDD0132565BD1E00226D7B /* Autor.swift in Sources */,
