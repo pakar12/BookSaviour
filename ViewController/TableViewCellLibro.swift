@@ -8,9 +8,15 @@
 
 import UIKit
 
-class TableViewCellResumen: UITableViewCell {
-
-    @IBOutlet weak var resumen: ResumenLibroView!
+class TableViewCellLibro: UITableViewCell {
+    
+    @IBOutlet weak var nombre: UILabel!
+    
+    @IBOutlet weak var autor: UILabel!
+    
+    @IBOutlet weak var foto: UIImageView!
+    
+    @IBOutlet weak var puntuacion: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
