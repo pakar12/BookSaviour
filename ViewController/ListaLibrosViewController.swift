@@ -15,8 +15,7 @@ class ListaLibroViewController: UIViewController{
     
     @IBOutlet weak var tabBar: UITabBar!
     
-    var searchController: UISearchController!
-    var resultsController = UITableViewController()
+    @IBOutlet weak var searchController: UISearchBar!
     
     var libros = [Libro]()
     var filteredBooks = [Libro]()
@@ -27,16 +26,7 @@ class ListaLibroViewController: UIViewController{
         super.viewDidLoad()
         //searchBar
             //creamos el SearchBar
-        self.searchController = UISearchController(searchResultsController: self.resultsController)
-        self.tableView.tableHeaderView = self.searchController.searchBar
-        self.searchController.searchResultsUpdater = self
-      
-            //TableSetting
-        self.resultsController.tableView.dataSource = self
-        self.resultsController.tableView.delegate = self
-            //Personalizacion de celda de búsqueda
-        self.resultsController.tableView.rowHeight = 103.5
-        self.resultsController.tableView.estimatedRowHeight = 103.5
+        self.searchController.delegate = self
         
         //Tamaño celda de búsqueda
         tableView.rowHeight = 103.5
@@ -67,6 +57,9 @@ class ListaLibroViewController: UIViewController{
         
         libros += [libro1!, libro2!, libro3!]
         
+        
+
+        busqueda()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -82,28 +75,17 @@ extension ListaLibroViewController: UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if tableView == self.tableView {
-            return libros.count
-        }else{
             return filteredBooks.count
-        }
+
     }
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "Libro", for: indexPath) as! TableViewCellLibro
-        
-        if tableView == self.tableView {
-            cell.nombre.text = libros[indexPath.row].nombre
-            cell.autor.text = libros[indexPath.row].autor
-            cell.foto.image = libros[indexPath.row].foto
-        }else{
-            cell.nombre.text = filteredBooks[indexPath.row].nombre
-            cell.autor.text = filteredBooks[indexPath.row].autor
-            cell.foto.image = filteredBooks[indexPath.row].foto
-        }
-        
-        
+
+        cell.nombre.text = filteredBooks[indexPath.row].nombre
+        cell.autor.text = filteredBooks[indexPath.row].autor
+        cell.foto.image = filteredBooks[indexPath.row].foto
+      
         return cell
     }
 }
@@ -114,15 +96,15 @@ extension ListaLibroViewController: UITabBarDelegate {
 
         if item.tag == 1 {
             self.estadoBuscado = Estado.seguido
-            self.resultsController.tableView.reloadData()
+            busqueda()
         }
         if item.tag == 2 {
             self.estadoBuscado = Estado.pendiente
-            self.resultsController.tableView.reloadData()
+            busqueda()
         }
         if item.tag == 3 {
             self.estadoBuscado = Estado.nada
-            self.resultsController.tableView.reloadData()
+            busqueda()
         }
         if item.tag == 4 {
             print("owo4")
@@ -131,12 +113,23 @@ extension ListaLibroViewController: UITabBarDelegate {
     }
 }
 
-extension ListaLibroViewController: UISearchResultsUpdating{
-    
-    func updateSearchResults(for searchController: UISearchController) {
+extension ListaLibroViewController: UISearchBarDelegate{
+    func busqueda(){
+        self.filteredBooks = self.libros.filter{ (libro: Libro) -> Bool in
+            if estadoBuscado == libro.estado{
+                return true
+            }else{
+                return false
+            }
+            
+        }
+        tableView.reloadData()
+    }
+        
+    func searchBar(_ searchBar: UISearchBar, textDidChange search: String){
         
         self.filteredBooks = self.libros.filter{ (libro: Libro) -> Bool in
-            if(libro.nombre.lowercased().contains(self.searchController.searchBar.text!.lowercased())){
+            if(libro.nombre.lowercased().contains(searchBar.text!.lowercased())){
                 
                 if estadoBuscado == libro.estado{
                     return true
@@ -148,7 +141,6 @@ extension ListaLibroViewController: UISearchResultsUpdating{
                 return false
             }
         }
-        
-        self.resultsController.tableView.reloadData()
+        tableView.reloadData()
     }
 }
