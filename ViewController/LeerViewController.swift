@@ -48,7 +48,7 @@ class LeerViewController: UIViewController , UIScrollViewDelegate{
     
     func viewForZooming(in ScrollView: UIScrollView)-> UIView? {
         
-        return mainScrollView.subviews[1]
+        return mainScrollView.subviews[0]
     }
 }
 

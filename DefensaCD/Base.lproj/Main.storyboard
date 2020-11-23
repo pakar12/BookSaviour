@@ -285,6 +285,7 @@
                         <viewLayoutGuide key="safeArea" id="yPi-4G-tNG"/>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="hqo-Tm-6WK" id="zUy-rN-jv7"/>
                         <outlet property="tabBar" destination="omV-Ga-OkB" id="xrt-59-sBm"/>
                         <outlet property="tableView" destination="EhV-qF-cCL" id="uWo-3h-TDn"/>
                     </connections>

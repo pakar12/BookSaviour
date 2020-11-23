@@ -13,20 +13,26 @@ class ListaLibroViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
+    
     @IBOutlet weak var tabBar: UITabBar!
     
     var libros = [Libro]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //searchBar
+        
+        
+        //Tamaño celda
         tableView.rowHeight = 103.5
         tableView.estimatedRowHeight = 103.5
         
-
+        //TabBar
         tabBar.delegate = self
-       
         tabBar.selectedItem = tabBar.items?[0]
         
+        //Datos
         var  listaCapitulos = [Capitulo]()
         
         let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
@@ -39,11 +45,11 @@ class ListaLibroViewController: UIViewController{
         let capitulo7 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         listaCapitulos += [capitulo1!, capitulo2!, capitulo3!, capitulo4!, capitulo5!, capitulo6!, capitulo7!]
         
-        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos, estado: Estado.nada)
         
-        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos, estado: Estado.pendiente)
         
-        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos, estado: Estado.seguido)
         
         libros += [libro1!, libro2!, libro3!]
         
