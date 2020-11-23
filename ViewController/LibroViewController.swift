@@ -20,8 +20,6 @@ class LibroViewController: UIViewController{
     
     @IBOutlet weak var descripcion: UILabel!
     
-    
-    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var leerBoton: UIButton!
@@ -36,18 +34,35 @@ class LibroViewController: UIViewController{
         self.nombreLibro.text = libro?.nombre
         self.autorLibro.text = libro?.autor
         //self.notaMedia.text = libro?.notaMedia + ""
+        estadoLibro()
+
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
+    @IBAction func botonSeguir(_ sender: Any) {
+        libro?.seguir()
+        estadoLibro()
+    }
         
+    @IBAction func botonPendiente(_ sender: Any) {
+        libro?.pendiente()
+        estadoLibro()
     }
     
     func estadoLibro(){
 
         if libro?.estado == Estado.seguido{
-            leerBoton.tintColor = .red
-            leer
+            leerBoton.tintColor = #colorLiteral(red: 0.8574012518, green: 0.6694219708, blue: 0.1438133121, alpha: 1)
+            pendienteBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         } else if(libro?.estado == Estado.pendiente){
-            
+            leerBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+            pendienteBoton.tintColor = #colorLiteral(red: 0.8574012518, green: 0.6694219708, blue: 0.1438133121, alpha: 1)
         } else{
-            
+            leerBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+            pendienteBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         }
 
     }
@@ -56,6 +71,13 @@ class LibroViewController: UIViewController{
         dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let viewDestiny = segue.destination as! LeerViewController
+        let selectedRow = tableView.indexPath(for: sender as! TableViewCellCapitulo)?.row
+        viewDestiny.imageArray = (libro?.listaCapitulos[selectedRow!].imagenes)!
+        
+        libro?.listaCapitulos[selectedRow!].cambiar()
+    }
 
 }
 

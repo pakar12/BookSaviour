@@ -27,4 +27,8 @@ class Capitulo{
         self.numero = numero
     }
     
+    func cambiar(){
+        self.estado = UIImage(named: "no-visto")!
+    }
+    
 }

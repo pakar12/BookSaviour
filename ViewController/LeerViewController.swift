@@ -21,7 +21,7 @@ class LeerViewController: UIViewController , UIScrollViewDelegate{
         super.viewDidLoad()
         
         mainScrollView.frame = view.frame
-        imageArray = [UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!]
+        
         
         for i in 0..<imageArray.count{
             let imageView = UIImageView()

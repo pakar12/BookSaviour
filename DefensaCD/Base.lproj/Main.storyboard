@@ -592,10 +592,16 @@ EG5vbWJyZQ
                                                                         <state key="normal" image="leer">
                                                                             <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </state>
+                                                                        <connections>
+                                                                            <action selector="botonSeguir:" destination="Zhp-c3-ozI" eventType="touchUpInside" id="djK-9U-MK3"/>
+                                                                        </connections>
                                                                     </button>
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ohD-hn-X63">
                                                                         <rect key="frame" x="63" y="0.0" width="63" height="120"/>
                                                                         <state key="normal" image="pendiente"/>
+                                                                        <connections>
+                                                                            <action selector="botonPendiente:" destination="Zhp-c3-ozI" eventType="touchUpInside" id="oGx-6F-tGb"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>

@@ -38,8 +38,8 @@ class ListaLibroViewController: UIViewController{
         //Datos
         var  listaCapitulos = [Capitulo]()
         
-        let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        
+        let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 3)
+
         let capitulo2 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         let capitulo3 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         let capitulo4 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
@@ -62,7 +62,7 @@ class ListaLibroViewController: UIViewController{
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        tableView.reloadData()
+        busqueda()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -129,8 +129,14 @@ extension ListaLibroViewController: UISearchBarDelegate{
         }
         tableView.reloadData()
     }
-        
+    
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange search: String){
+        if(search.count == 0){
+            filteredBooks = libros
+            busqueda()
+            return
+        }
         
         self.filteredBooks = self.libros.filter{ (libro: Libro) -> Bool in
             if(libro.nombre.lowercased().contains(searchBar.text!.lowercased())){
@@ -145,6 +151,7 @@ extension ListaLibroViewController: UISearchBarDelegate{
                 return false
             }
         }
+       
         tableView.reloadData()
     }
 }
