@@ -25,13 +25,12 @@ class ListaLibroViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         //searchBar
-            //creamos el SearchBar
         self.searchController.delegate = self
         
-        //Tamaño celda de búsqueda
+        //Tamaño celda
         tableView.rowHeight = 103.5
         tableView.estimatedRowHeight = 103.5
-        tableView.backgroundColor = #colorLiteral(red: 0.05098039216, green: 0.05098039216, blue: 0.05098039216, alpha: 1)
+        
         //TabBar
         tabBar.delegate = self
         tabBar.selectedItem = tabBar.items?[0]
@@ -62,10 +61,14 @@ class ListaLibroViewController: UIViewController{
         busqueda()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let viewDestiny = segue.destination as! LibroViewController
         let selectedRow = tableView.indexPath(for: sender as! TableViewCellLibro)?.row
-        viewDestiny.libro = libros[selectedRow!]
+        viewDestiny.libro = filteredBooks[selectedRow!]
     }
     
     
@@ -107,13 +110,14 @@ extension ListaLibroViewController: UITabBarDelegate {
             busqueda()
         }
         if item.tag == 4 {
-            print("owo4")
+            exit(0)
         }
         print("funciona a medias")
     }
 }
 
 extension ListaLibroViewController: UISearchBarDelegate{
+    
     func busqueda(){
         self.filteredBooks = self.libros.filter{ (libro: Libro) -> Bool in
             if estadoBuscado == libro.estado{

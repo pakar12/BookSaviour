@@ -10,11 +10,23 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    
+    @IBOutlet weak var username: UITextField!
+    
+    @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var login: UIButton!
+    
+    @IBOutlet weak var mensajeIncorrecto: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        mensajeIncorrecto.isHidden = true
     }
-
+    
+    func comprobarUser(){
+        
+    }
 
 }
 

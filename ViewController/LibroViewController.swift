@@ -24,6 +24,8 @@ class LibroViewController: UIViewController{
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var leerBoton: UIButton!
+    @IBOutlet weak var pendienteBoton: UIButton!
     
     
     
@@ -34,7 +36,20 @@ class LibroViewController: UIViewController{
         self.nombreLibro.text = libro?.nombre
         self.autorLibro.text = libro?.autor
         //self.notaMedia.text = libro?.notaMedia + ""
-   
+        
+    }
+    
+    func estadoLibro(){
+
+        if libro?.estado == Estado.seguido{
+            leerBoton.tintColor = .red
+            leer
+        } else if(libro?.estado == Estado.pendiente){
+            
+        } else{
+            
+        }
+
     }
     
     @IBAction func atras(_ sender: Any) {

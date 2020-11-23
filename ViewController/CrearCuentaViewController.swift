@@ -10,11 +10,27 @@ import UIKit
 
 class CrearCuentaViewController: UIViewController {
 
+    
+    @IBOutlet weak var nombre: UITextField!
+    
+    @IBOutlet weak var password1: UITextField!
+    
+    @IBOutlet weak var password2: UITextField!
+    
+    @IBOutlet weak var incorrecto: UILabel!
+    
+    @IBOutlet weak var boton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        incorrecto.isHidden = true
     }
-
-
+    
+    @IBAction func atras(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func registrarse(){
+        
+    }
 }
 
