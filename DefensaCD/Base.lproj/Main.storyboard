@@ -318,10 +318,13 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybi-Hz-2Ap">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="top" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybi-Hz-2Ap">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.050980392156862744" green="0.050980392156862744" blue="0.050980392156862744" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.93952661752700806" green="0.99843806028366089" blue="0.9842490553855896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="igq-Ab-dfX" id="NFB-X6-ilg"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <constraints>
@@ -336,6 +339,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TnA-Ky-UGG"/>
                     </view>
+                    <connections>
+                        <outlet property="mainScrollView" destination="ybi-Hz-2Ap" id="MF0-uI-3mA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNp-ic-mBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
