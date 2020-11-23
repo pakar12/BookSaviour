@@ -32,7 +32,7 @@ class LibroViewController: UIViewController{
         
         self.imagen.image = libro?.foto
         self.nombreLibro.text = libro?.nombre
-        self.autorLibro.text = libro?.autor.nombre
+        self.autorLibro.text = libro?.autor
         //self.notaMedia.text = libro?.notaMedia + ""
    
     }

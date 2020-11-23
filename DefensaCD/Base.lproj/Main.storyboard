@@ -308,7 +308,14 @@
                                     <color key="textColor" red="0.94117647059999998" green="1" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </textAttributes>
                                 <items>
-                                    <navigationItem title="Title" id="56u-3S-CNv"/>
+                                    <navigationItem title="Title" id="56u-3S-CNv">
+                                        <barButtonItem key="leftBarButtonItem" title="〈" id="dse-xM-pYa">
+                                            <color key="tintColor" red="0.81960784310000001" green="0.61176470589999998" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="atras:" destination="igq-Ab-dfX" id="pg0-VE-vzb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ybi-Hz-2Ap">
@@ -334,10 +341,10 @@
             </objects>
             <point key="canvasLocation" x="2546" y="128"/>
         </scene>
-        <!--Detalles-->
+        <!--Libro-->
         <scene sceneID="UTa-qR-mkF">
             <objects>
-                <viewController id="Zhp-c3-ozI" userLabel="Detalles" customClass="LibroViewController" customModule="DefensaCD" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Zhp-c3-ozI" userLabel="Libro" customClass="LibroViewController" customModule="DefensaCD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEJ-u9-dgF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -429,6 +436,7 @@
                                             <outlet property="estado" destination="932-TG-kaC" id="fEh-eK-haL"/>
                                             <outlet property="nombre" destination="ZD3-sW-ge7" id="beI-pv-3Nl"/>
                                             <outlet property="numero" destination="LuM-O4-r5v" id="B6J-Qy-gjm"/>
+                                            <segue destination="igq-Ab-dfX" kind="presentation" id="T4U-eC-Nho"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

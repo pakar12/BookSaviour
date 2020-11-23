@@ -23,7 +23,6 @@
 		1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B5012565612900C691B6 /* LeerViewController.swift */; };
 		1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */; };
 		15FDD0112565BC3800226D7B /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDD0102565BC3800226D7B /* Libro.swift */; };
-		15FDD0132565BD1E00226D7B /* Autor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDD0122565BD1E00226D7B /* Autor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		1590B5012565612900C691B6 /* LeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeerViewController.swift; sourceTree = "<group>"; };
 		1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
 		15FDD0102565BC3800226D7B /* Libro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
-		15FDD0122565BD1E00226D7B /* Autor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Autor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +171,6 @@
 			isa = PBXGroup;
 			children = (
 				15FDD0102565BC3800226D7B /* Libro.swift */,
-				15FDD0122565BD1E00226D7B /* Autor.swift */,
 				153E8C9225696CC000C73120 /* Capitulo.swift */,
 			);
 			path = Class;
@@ -315,7 +312,6 @@
 				1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */,
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
-				15FDD0132565BD1E00226D7B /* Autor.swift in Sources */,
 				1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */,
 				15093294256736A700912296 /* TableViewCellLibro.swift in Sources */,
 				153E8C8F25693C7300C73120 /* TableViewCellCapitulo.swift in Sources */,

@@ -13,11 +13,11 @@ class Libro{
     var nombre: String
     var foto: UIImage?
     var notaMedia: Float
-    var autor: Autor
+    var autor: String
     var definicion: String
     var listaCapitulos: [Capitulo]
     
-    init?(nombre: String, foto: UIImage?, autor: Autor, notaMedia: Float, definicion: String, listaCapitulos: [Capitulo]!){
+    init?(nombre: String, foto: UIImage?, autor: String, notaMedia: Float, definicion: String, listaCapitulos: [Capitulo]!){
         
         self.nombre = nombre
         self.foto = foto

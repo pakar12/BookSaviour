@@ -29,8 +29,6 @@ class ListaLibroViewController: UIViewController{
         
         var  listaCapitulos = [Capitulo]()
         
-        let JJ = Autor(nombre: "El desafortunado JJ", foto: UIImage(named: "visto")!, libros: nil)
-        
         let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         
         let capitulo2 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
@@ -41,11 +39,11 @@ class ListaLibroViewController: UIViewController{
         let capitulo7 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         listaCapitulos += [capitulo1!, capitulo2!, capitulo3!, capitulo4!, capitulo5!, capitulo6!, capitulo7!]
         
-        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: JJ!, notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
         
-        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: JJ!, notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
         
-        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: JJ!, notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
+        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos)
         
         libros += [libro1!, libro2!, libro3!]
         
@@ -72,7 +70,7 @@ extension ListaLibroViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "Libro", for: indexPath) as! TableViewCellLibro
         
         cell.nombre.text = libros[indexPath.row].nombre
-        cell.autor.text = libros[indexPath.row].autor.nombre
+        cell.autor.text = libros[indexPath.row].autor
         cell.foto.image = libros[indexPath.row].foto
         //cell.resumen.Autor.text = libros[indexPath.row].autor
         

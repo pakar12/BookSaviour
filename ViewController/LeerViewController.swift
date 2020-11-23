@@ -15,6 +15,9 @@ class LeerViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-
+    @IBAction func atras(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
 
