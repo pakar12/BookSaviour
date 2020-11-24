@@ -20,7 +20,7 @@ class ListaLibroViewController: UIViewController{
     var libros = [Libro]()
     var filteredBooks = [Libro]()
     
-    var estadoBuscado: Estado = Estado.seguido
+    var estadoBuscado: Int = 1
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,11 +48,11 @@ class ListaLibroViewController: UIViewController{
         let capitulo7 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         listaCapitulos += [capitulo1!, capitulo2!, capitulo3!, capitulo4!, capitulo5!, capitulo6!, capitulo7!]
         
-        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos, estado: Estado.nada)
+        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 3)
         
-        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos, estado: Estado.pendiente)
+        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 2)
         
-        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", notaMedia: 5.0, definicion: "owo", listaCapitulos: listaCapitulos, estado: Estado.seguido)
+        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 1)
         
         libros += [libro1!, libro2!, libro3!]
         
@@ -98,15 +98,15 @@ extension ListaLibroViewController: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
 
         if item.tag == 1 {
-            self.estadoBuscado = Estado.seguido
+            self.estadoBuscado = 1
             busqueda()
         }
         if item.tag == 2 {
-            self.estadoBuscado = Estado.pendiente
+            self.estadoBuscado = 2
             busqueda()
         }
         if item.tag == 3 {
-            self.estadoBuscado = Estado.nada
+            self.estadoBuscado = 3
             busqueda()
         }
         if item.tag == 4 {

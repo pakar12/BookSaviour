@@ -54,10 +54,10 @@ class LibroViewController: UIViewController{
     
     func estadoLibro(){
 
-        if libro?.estado == Estado.seguido{
+        if libro?.estado == 1{
             leerBoton.tintColor = #colorLiteral(red: 0.8574012518, green: 0.6694219708, blue: 0.1438133121, alpha: 1)
             pendienteBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
-        } else if(libro?.estado == Estado.pendiente){
+        } else if(libro?.estado == 2){
             leerBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
             pendienteBoton.tintColor = #colorLiteral(red: 0.8574012518, green: 0.6694219708, blue: 0.1438133121, alpha: 1)
         } else{
@@ -76,7 +76,7 @@ class LibroViewController: UIViewController{
         let selectedRow = tableView.indexPath(for: sender as! TableViewCellCapitulo)?.row
         viewDestiny.imageArray = (libro?.listaCapitulos[selectedRow!].imagenes)!
         
-        libro?.listaCapitulos[selectedRow!].cambiar()
+        libro?.listaCapitulos[selectedRow!].verCapitulo()
     }
 
 }
@@ -88,7 +88,7 @@ extension LibroViewController: UITableViewDataSource, UITableViewDelegate{
         let cell = tableView.dequeueReusableCell(withIdentifier: "CapituloCell", for: indexPath) as! TableViewCellCapitulo
         
         
-        cell.estado.image = libro!.listaCapitulos[indexPath.row].estado!
+        cell.estado.image = libro!.listaCapitulos[indexPath.row].tipoVisto()
         cell.numero.text = "\(String(describing: libro!.listaCapitulos[indexPath.row].numero))"
         cell.nombre.text = libro?.listaCapitulos[indexPath.row].nombre
         return cell

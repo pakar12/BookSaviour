@@ -1,4 +1,40 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="17G65" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CapituloEntity" representedClassName="CapituloEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="imagenes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImagenesCapituloEntity" inverseName="capituloProcedente" inverseEntity="ImagenesCapituloEntity" syncable="YES"/>
+        <relationship name="libroProcedente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LibroEntity" inverseName="capitulos" inverseEntity="LibroEntity" syncable="YES"/>
+        <relationship name="usuarioVisor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="capitulosVistos" inverseEntity="UsuarioEntity" syncable="YES"/>
+    </entity>
+    <entity name="EstadoUsuarioLibro" representedClassName="EstadoUsuarioLibro" syncable="YES" codeGenerationType="class">
+        <attribute name="estado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="estadoLibro" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LibroEntity" inverseName="estadoUsuario" inverseEntity="LibroEntity" syncable="YES"/>
+        <relationship name="estadoUsuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="estadoLibro" inverseEntity="UsuarioEntity" syncable="YES"/>
+    </entity>
+    <entity name="ImagenesCapituloEntity" representedClassName="ImagenesCapituloEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="imagenes" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="capituloProcedente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CapituloEntity" inverseName="imagenes" inverseEntity="CapituloEntity" syncable="YES"/>
+    </entity>
+    <entity name="LibroEntity" representedClassName="LibroEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="autor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="definicion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="capitulos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CapituloEntity" inverseName="libroProcedente" inverseEntity="CapituloEntity" syncable="YES"/>
+        <relationship name="estadoUsuario" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstadoUsuarioLibro" inverseName="estadoLibro" inverseEntity="EstadoUsuarioLibro" syncable="YES"/>
+    </entity>
+    <entity name="UsuarioEntity" representedClassName="UsuarioEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="capitulosVistos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CapituloEntity" inverseName="usuarioVisor" inverseEntity="CapituloEntity" syncable="YES"/>
+        <relationship name="estadoLibro" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstadoUsuarioLibro" inverseName="estadoUsuario" inverseEntity="EstadoUsuarioLibro" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="LibroEntity" positionX="-196.0625" positionY="-213.984375" width="128" height="135"/>
+        <element name="CapituloEntity" positionX="75.9453125" positionY="-185.95703125" width="128" height="120"/>
+        <element name="UsuarioEntity" positionX="105.9921875" positionY="70.984375" width="128" height="105"/>
+        <element name="EstadoUsuarioLibro" positionX="-192.05859375" positionY="130" width="128" height="90"/>
+        <element name="ImagenesCapituloEntity" positionX="-30.97265625" positionY="-10.00390625" width="128" height="75"/>
+    </elements>
 </model>

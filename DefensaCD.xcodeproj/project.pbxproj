@@ -22,6 +22,7 @@
 		1590B5032565612A00C691B6 /* LibroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B5002565612900C691B6 /* LibroViewController.swift */; };
 		1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B5012565612900C691B6 /* LeerViewController.swift */; };
 		1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */; };
+		15FD101C256C70CF001FA354 /* LibroNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD101B256C70CF001FA354 /* LibroNSObject.swift */; };
 		15FDD0112565BC3800226D7B /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDD0102565BC3800226D7B /* Libro.swift */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +65,7 @@
 		1590B5002565612900C691B6 /* LibroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibroViewController.swift; sourceTree = "<group>"; };
 		1590B5012565612900C691B6 /* LeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeerViewController.swift; sourceTree = "<group>"; };
 		1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
+		15FD101B256C70CF001FA354 /* LibroNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroNSObject.swift; sourceTree = "<group>"; };
 		15FDD0102565BC3800226D7B /* Libro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,18 +94,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		153F7F3E25669BBA009543E4 /* View */ = {
+		153F7F3E25669BBA009543E4 /* DataBaseModels */ = {
 			isa = PBXGroup;
 			children = (
+				15FD101B256C70CF001FA354 /* LibroNSObject.swift */,
 			);
-			path = View;
+			path = DataBaseModels;
 			sourceTree = "<group>";
 		};
 		1590B4C22565555300C691B6 = {
 			isa = PBXGroup;
 			children = (
 				1590B4CD2565555300C691B6 /* DefensaCD */,
-				153F7F3E25669BBA009543E4 /* View */,
+				153F7F3E25669BBA009543E4 /* DataBaseModels */,
 				15FDD00E2565BBCF00226D7B /* ViewController */,
 				15FDD00F2565BC0000226D7B /* Class */,
 				1590B4E52565555600C691B6 /* DefensaCDTests */,
@@ -313,6 +316,7 @@
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
 				1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */,
+				15FD101C256C70CF001FA354 /* LibroNSObject.swift in Sources */,
 				15093294256736A700912296 /* TableViewCellLibro.swift in Sources */,
 				153E8C8F25693C7300C73120 /* TableViewCellCapitulo.swift in Sources */,
 				1590B5032565612A00C691B6 /* LibroViewController.swift in Sources */,
