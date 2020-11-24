@@ -45,23 +45,28 @@ class LibroViewController: UIViewController{
     
     @IBAction func botonSeguir(_ sender: Any) {
         libro?.seguir()
+        var _ = LibroNSObject().updateStateBook(usuario: usuario, libro: libro!, estado: (libro?.estado)!)
         estadoLibro()
     }
         
     @IBAction func botonPendiente(_ sender: Any) {
         libro?.pendiente()
+        var _ = LibroNSObject().updateStateBook(usuario: usuario, libro: libro!, estado: (libro?.estado)!)
         estadoLibro()
     }
     
     func estadoLibro(){
 
         if libro?.estado == 1{
+            
             leerBoton.tintColor = #colorLiteral(red: 0.8574012518, green: 0.6694219708, blue: 0.1438133121, alpha: 1)
             pendienteBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         } else if(libro?.estado == 2){
+            
             leerBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
             pendienteBoton.tintColor = #colorLiteral(red: 0.8574012518, green: 0.6694219708, blue: 0.1438133121, alpha: 1)
         } else{
+
             leerBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
             pendienteBoton.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
         }

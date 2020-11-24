@@ -11,11 +11,11 @@ import UIKit
 class Capitulo{
     
     var nombre: String
-    var estado: Bool
+    var estado: Int
     var imagenes: [UIImage]
     var numero: Int
     
-    init?(nombre: String, estado: Bool, imagenes: [UIImage]!, numero: Int){
+    init?(nombre: String, estado: Int, imagenes: [UIImage]!, numero: Int){
         self.nombre = nombre
         
         self.estado = estado
@@ -25,14 +25,16 @@ class Capitulo{
     }
     
     func verCapitulo(){
-        self.estado = true
+        self.estado = 2
     }
     
     func tipoVisto() -> UIImage{
-        if(estado){
+        if(estado == 1){
             return UIImage(named: "visto")!
+        } else {
+            return UIImage(named: "no-visto")!
         }
-        return UIImage(named: "no-visto")!
+        
     }
     
 }

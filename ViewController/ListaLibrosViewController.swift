@@ -38,14 +38,14 @@ class ListaLibroViewController: UIViewController{
         //Datos
         var  listaCapitulos = [Capitulo]()
         
-        let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 3)
+        let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 3)
 
-        let capitulo2 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo3 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo4 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo5 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo6 = Capitulo(nombre: "El bolsillo magico de donramon", estado: false, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo7 = Capitulo(nombre: "El bolsillo magico de donramon", estado: true, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
+        let capitulo2 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
+        let capitulo3 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
+        let capitulo4 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
+        let capitulo5 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
+        let capitulo6 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
+        let capitulo7 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
         listaCapitulos += [capitulo1!, capitulo2!, capitulo3!, capitulo4!, capitulo5!, capitulo6!, capitulo7!]
         
         let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 3)
@@ -55,12 +55,12 @@ class ListaLibroViewController: UIViewController{
         let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 1)
         
         //libros += [libro1!, libro2!, libro3!]
-        
+        /*
         let _ = LibroNSObject.init(libro: libro1!)
  
         let _ = LibroNSObject.init(libro: libro2!)
         let _ = LibroNSObject.init(libro: libro3!)
- 
+    */
         libros = (LibroNSObject().consultarLibros(id_usuario: usuario)!)
         
         busqueda()

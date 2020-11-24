@@ -67,8 +67,8 @@ class LibroNSObject: NSObject {
                 let capitulos = try managedContext.fetch(fetchRequestCapitulos)
                 
                 //Todos los capitulos marcados x este user
-                let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "CapituloEntity")
-    //            fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "usuarioVisor=%@", usuario)
+                let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioCapitulo")
+                fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "estadoUsuarioCapitulo=%@ and estado=%@", usuario, "2")
                 
                 let capitulosVistos = try managedContext.fetch(fetchRequestEstadoCapitulo)
                 
@@ -89,8 +89,12 @@ class LibroNSObject: NSObject {
                         
                         consultaInternaImagenes.append(fotoAux!)
                     }
+                    var capVisto = 1
+                    if(capitulosVistos.contains(capitulo)){
+                        capVisto = 2
+                    }
                     
-                    consultaInternaCapitulo.append(Capitulo(nombre: capitulo.value(forKey: "nombre") as! String, estado: capitulosVistos.contains(capitulo), imagenes: consultaInternaImagenes, numero: capitulo.value(forKey: "numero") as! Int)!)
+                    consultaInternaCapitulo.append(Capitulo(nombre: capitulo.value(forKey: "nombre") as! String, estado: capVisto, imagenes: consultaInternaImagenes, numero: capitulo.value(forKey: "numero") as! Int)!)
                     
                 }
                 
@@ -100,8 +104,21 @@ class LibroNSObject: NSObject {
                     }
                 }
                 
-                resultado.append(Libro(nombre: libro.value(forKey: "nombre") as! String, foto: fotoAux, autor:  libro.value(forKey: "autor") as! String,definicion: libro.value(forKey: "definicion") as! String, listaCapitulos: consultaInternaCapitulo, estado: 3)!)
-                //falta relacion libro/user, porque falta user
+                //Todos los libros marcados x este user
+                let fetchRequestEstadoLibro = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioLibro")
+                fetchRequestEstadoLibro.predicate = NSPredicate(format: "estadoUsuario=%@ and estadoLibro=%@", usuario, libro)
+                
+                let estadoLib = try managedContext.fetch(fetchRequestEstadoLibro)
+                
+                var estadoLibFinal: Int
+                if(estadoLib.isEmpty){
+                    estadoLibFinal = 3
+                }else{
+                    estadoLibFinal = estadoLib[0].value(forKey: "estado") as! Int
+                }
+                
+                resultado.append(Libro(nombre: libro.value(forKey: "nombre") as! String, foto: fotoAux, autor:  libro.value(forKey: "autor") as! String,definicion: libro.value(forKey: "definicion") as! String, listaCapitulos: consultaInternaCapitulo, estado: estadoLibFinal)!)
+                
             }
             
             return resultado
@@ -138,7 +155,7 @@ class LibroNSObject: NSObject {
         if(checkIfExist(usuario: usuario, libro: idBook!)){
             do{
                 let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioLibro")
-                fetchRequest.predicate = NSPredicate(format: "estadoLibro==%@ and estadoUsuario == %@", try managedContext.existingObject(with: idBook!), try managedContext.existingObject(with: usuario))
+                fetchRequest.predicate = NSPredicate(format: "estadoLibro=%@ and estadoUsuario=%@", try managedContext.existingObject(with: idBook!), try managedContext.existingObject(with: usuario))
                 
                  var insercion = try managedContext.fetch(fetchRequest)
                 
@@ -177,7 +194,7 @@ class LibroNSObject: NSObject {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioLibro")
       
         do {
-              fetchRequest.predicate = NSPredicate(format: "estadoLibro==%@ and estadoUsuario == %@", try managedContext.existingObject(with: libro), try managedContext.existingObject(with: usuario))
+              fetchRequest.predicate = NSPredicate(format: "estadoLibro=%@ and estadoUsuario=%@", try managedContext.existingObject(with: libro), try managedContext.existingObject(with: usuario))
             
             if try managedContext.fetch(fetchRequest).count > 0{
                 return true
