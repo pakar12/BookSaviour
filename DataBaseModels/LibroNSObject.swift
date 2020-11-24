@@ -41,11 +41,10 @@ class LibroNSObject: NSObject {
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
-        
-        
+
     }
     
-    func consultarLibros(id_usuario: NSManagedObjectID?) -> [Libro]?{
+    func consultarLibros(id_usuario: NSManagedObjectID) -> [Libro]?{
         var resultado = [Libro]()
         var consultaInternaCapitulo = [Capitulo]()
         var consultaInternaImagenes = [UIImage]()
@@ -60,7 +59,7 @@ class LibroNSObject: NSObject {
         do {
             let libros = try managedContext.fetch(fetchRequest)
             
-            //let usuario = try managedContext .existingObject(with: id_usuario)
+            let usuario = try managedContext .existingObject(with: id_usuario)
             for libro in libros {
                 
                 let fetchRequestCapitulos = NSFetchRequest<NSManagedObject>(entityName: "CapituloEntity")
@@ -69,7 +68,7 @@ class LibroNSObject: NSObject {
                 
                 //Todos los capitulos marcados x este user
                 let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "CapituloEntity")
-//fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "usuarioVisor=%@", usuario)
+    //            fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "usuarioVisor=%@", usuario)
                 
                 let capitulosVistos = try managedContext.fetch(fetchRequestEstadoCapitulo)
                 
@@ -111,6 +110,85 @@ class LibroNSObject: NSObject {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         return nil
+    }
+    
+    func getBook(nombre: String) -> NSManagedObjectID?{
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return nil}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LibroEntity")
+        fetchRequest.predicate = NSPredicate(format: "nombre=%@", nombre)
+        do{
+            return try managedContext.fetch(fetchRequest)[0].objectID
+        }catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        return nil
+    }
+    
+    func updateStateBook(usuario: NSManagedObjectID, libro: Libro, estado: Int){
+        
+        let idBook = getBook(nombre: libro.nombre)
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+      
+        if(checkIfExist(usuario: usuario, libro: idBook!)){
+            do{
+                let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioLibro")
+                fetchRequest.predicate = NSPredicate(format: "estadoLibro==%@ and estadoUsuario == %@", try managedContext.existingObject(with: idBook!), try managedContext.existingObject(with: usuario))
+                
+                 var insercion = try managedContext.fetch(fetchRequest)
+                
+                insercion[0].setValue(estado, forKey: "estado")
+                
+                try managedContext.save()
+                
+            }  catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        }else{
+            
+            do{
+                let entity = NSEntityDescription.entity(forEntityName: "EstadoUsuarioLibro", in: managedContext)!
+                let insercion = NSManagedObject(entity: entity, insertInto: managedContext)
+                
+                insercion.setValue(estado, forKey: "estado")
+                insercion.setValue(try managedContext.existingObject(with: idBook!), forKey: "estadoLibro")
+                insercion.setValue(try managedContext.existingObject(with: usuario), forKey: "estadoUsuario")
+                
+                try managedContext.save()
+                
+            }  catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+            
+        }
+        
+    }
+    
+    func checkIfExist(usuario: NSManagedObjectID, libro: NSManagedObjectID) -> Bool{
+        
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return false}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioLibro")
+      
+        do {
+              fetchRequest.predicate = NSPredicate(format: "estadoLibro==%@ and estadoUsuario == %@", try managedContext.existingObject(with: libro), try managedContext.existingObject(with: usuario))
+            
+            if try managedContext.fetch(fetchRequest).count > 0{
+                return true
+            }else{
+                return false
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+
+        return false
     }
     
 

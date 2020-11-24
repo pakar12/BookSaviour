@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class ListaLibroViewController: UIViewController{
     
     
@@ -16,7 +16,7 @@ class ListaLibroViewController: UIViewController{
     @IBOutlet weak var tabBar: UITabBar!
     
     @IBOutlet weak var searchController: UISearchBar!
-    
+    var usuario = NSManagedObjectID()
     var libros = [Libro]()
     var filteredBooks = [Libro]()
     
@@ -57,11 +57,11 @@ class ListaLibroViewController: UIViewController{
         //libros += [libro1!, libro2!, libro3!]
         
         let _ = LibroNSObject.init(libro: libro1!)
-        /*
+ 
         let _ = LibroNSObject.init(libro: libro2!)
         let _ = LibroNSObject.init(libro: libro3!)
-        */
-        libros = (LibroNSObject().consultarLibros(id_usuario: nil)!)
+ 
+        libros = (LibroNSObject().consultarLibros(id_usuario: usuario)!)
         
         busqueda()
     }
@@ -74,6 +74,7 @@ class ListaLibroViewController: UIViewController{
         let viewDestiny = segue.destination as! LibroViewController
         let selectedRow = tableView.indexPath(for: sender as! TableViewCellLibro)?.row
         viewDestiny.libro = filteredBooks[selectedRow!]
+        viewDestiny.usuario = self.usuario
     }
     
     
@@ -115,9 +116,10 @@ extension ListaLibroViewController: UITabBarDelegate {
             busqueda()
         }
         if item.tag == 4 {
-            exit(0)
+            
+            dismiss(animated:true, completion: nil)
         }
-        print("funciona a medias")
+        print("se deslogea")
     }
 }
 

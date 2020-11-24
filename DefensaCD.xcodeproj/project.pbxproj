@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		15093294256736A700912296 /* TableViewCellLibro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15093293256736A700912296 /* TableViewCellLibro.swift */; };
+		150A49E2256D3135007BFFF0 /* UsuarioNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150A49E1256D3135007BFFF0 /* UsuarioNSObject.swift */; };
+		150A49E4256D3214007BFFF0 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150A49E3256D3214007BFFF0 /* Usuario.swift */; };
 		153E8C8F25693C7300C73120 /* TableViewCellCapitulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E8C8E25693C7300C73120 /* TableViewCellCapitulo.swift */; };
 		153E8C9325696CC000C73120 /* Capitulo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153E8C9225696CC000C73120 /* Capitulo.swift */; };
 		157125F0256A8CA800DC79AE /* ListaLibrosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 157125EF256A8CA800DC79AE /* ListaLibrosViewController.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		15093293256736A700912296 /* TableViewCellLibro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellLibro.swift; sourceTree = "<group>"; };
+		150A49E1256D3135007BFFF0 /* UsuarioNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioNSObject.swift; sourceTree = "<group>"; };
+		150A49E3256D3214007BFFF0 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		153E8C8E25693C7300C73120 /* TableViewCellCapitulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellCapitulo.swift; sourceTree = "<group>"; };
 		153E8C9225696CC000C73120 /* Capitulo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Capitulo.swift; sourceTree = "<group>"; };
 		157125EF256A8CA800DC79AE /* ListaLibrosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaLibrosViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				15FD101B256C70CF001FA354 /* LibroNSObject.swift */,
 				15FD101D256C9C7C001FA354 /* CapituloNSObject.swift */,
 				15FD101F256C9F1E001FA354 /* ImagenNSObject.swift */,
+				150A49E1256D3135007BFFF0 /* UsuarioNSObject.swift */,
 			);
 			path = DataBaseModels;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			children = (
 				15FDD0102565BC3800226D7B /* Libro.swift */,
 				153E8C9225696CC000C73120 /* Capitulo.swift */,
+				150A49E3256D3214007BFFF0 /* Usuario.swift */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -316,11 +322,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150A49E4256D3214007BFFF0 /* Usuario.swift in Sources */,
 				157125F0256A8CA800DC79AE /* ListaLibrosViewController.swift in Sources */,
 				153E8C9325696CC000C73120 /* Capitulo.swift in Sources */,
 				15FD1020256C9F1E001FA354 /* ImagenNSObject.swift in Sources */,
 				1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */,
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
+				150A49E2256D3135007BFFF0 /* UsuarioNSObject.swift in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
 				1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */,
 				15FD101C256C70CF001FA354 /* LibroNSObject.swift in Sources */,

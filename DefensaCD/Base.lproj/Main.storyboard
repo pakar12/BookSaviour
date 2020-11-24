@@ -89,7 +89,8 @@
                                     <color key="titleColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xFa-IT-rDU" kind="presentation" id="9os-fg-eAc"/>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WqC-SX-iB5"/>
+                                    <segue destination="xFa-IT-rDU" kind="presentation" identifier="loginSegue" id="9os-fg-eAc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -195,6 +196,9 @@ EG5vbWJyZQ
                                         <state key="normal" title="→">
                                             <color key="titleColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="crearBoton:" destination="8h7-bH-cEy" eventType="touchUpInside" id="YmA-e1-g4a"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USUARIO OCUPADO O CONTRASEÑA NO VALIDA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69f-oO-dIj">
                                         <rect key="frame" x="-5" y="341" width="385" height="25"/>

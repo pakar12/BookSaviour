@@ -14,7 +14,7 @@ class ImagenNSObject: NSObject {
         super.init()
     }
     
-    init?(imagen: UIImage, capitulo: NSManagedObject, libro: NSManagedObject){
+    init?(imagen: UIImage, capitulo: NSManagedObject){
         super.init()
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}

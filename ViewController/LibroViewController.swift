@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import CoreData
 class LibroViewController: UIViewController{
     
 
@@ -25,6 +25,7 @@ class LibroViewController: UIViewController{
     @IBOutlet weak var leerBoton: UIButton!
     @IBOutlet weak var pendienteBoton: UIButton!
     
+    var usuario = NSManagedObjectID()
     
     
     override func viewDidLoad() {

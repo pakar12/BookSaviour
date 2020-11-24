@@ -29,8 +29,28 @@ class CrearCuentaViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    func registrarse(){
-        
+    @IBAction func crearBoton(_ sender: Any) {
+        if(registrarse()){
+            dismiss(animated: true, completion: nil)
+        }else{
+            incorrecto.isHidden = false
+        }
+    }
+    
+    func registrarse() -> Bool{
+        if nombre.text == nil || nombre.text!.count == 0 {
+            return false
+        }
+        if password1.text == nil || password1.text!.count == 0 {
+            return false
+        }
+        if password2.text == nil || password2.text!.count == 0 {
+            return false
+        }
+        if password1.text! != password2.text!{
+            return false
+        }
+        return UsuarioNSObject().crearCuenta(username: nombre.text!, password: password1.text!)
     }
 }
 
