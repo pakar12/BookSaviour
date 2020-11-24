@@ -54,10 +54,15 @@ class ListaLibroViewController: UIViewController{
         
         let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 1)
         
-        libros += [libro1!, libro2!, libro3!]
+        //libros += [libro1!, libro2!, libro3!]
         
+        let _ = LibroNSObject.init(libro: libro1!)
+        /*
+        let _ = LibroNSObject.init(libro: libro2!)
+        let _ = LibroNSObject.init(libro: libro3!)
+        */
+        libros = (LibroNSObject().consultarLibros(id_usuario: nil)!)
         
-
         busqueda()
     }
     

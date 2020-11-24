@@ -32,17 +32,23 @@ class LibroNSObject: NSObject {
             insercion.setValue(libro.definicion, forKeyPath: "definicion")
             
             
+            for capitulo in libro.listaCapitulos {
+                let _ = CapituloNSObject.init(capitulo: capitulo, libro: insercion)
+            }
+            
+            
             try managedContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
         }
         
+        
     }
     
-    func consultarLibros(id_usuario: NSManagedObjectID) -> [Libro]?{
+    func consultarLibros(id_usuario: NSManagedObjectID?) -> [Libro]?{
         var resultado = [Libro]()
         var consultaInternaCapitulo = [Capitulo]()
-        
+        var consultaInternaImagenes = [UIImage]()
         var fotoAux: UIImage?
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
             return nil
@@ -54,26 +60,38 @@ class LibroNSObject: NSObject {
         do {
             let libros = try managedContext.fetch(fetchRequest)
             
-            let usuario = try managedContext .existingObject(with: id_usuario)
+            //let usuario = try managedContext .existingObject(with: id_usuario)
             for libro in libros {
                 
-                let fetchRequestCapitulos = NSFetchRequest<NSManagedObject>(entityName: "capitulos")
+                let fetchRequestCapitulos = NSFetchRequest<NSManagedObject>(entityName: "CapituloEntity")
                 fetchRequestCapitulos.predicate = NSPredicate(format: "libroProcedente=%@", libro)
                 let capitulos = try managedContext.fetch(fetchRequestCapitulos)
                 
                 //Todos los capitulos marcados x este user
-                let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "capitulos")
-                fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "usuarioVisor=%@", usuario)
+                let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "CapituloEntity")
+//fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "usuarioVisor=%@", usuario)
+                
                 let capitulosVistos = try managedContext.fetch(fetchRequestEstadoCapitulo)
                 
                 for capitulo in capitulos {
                     
                     //hueco para el array de imagenes y para llorar juntos
+                    let fetchRequestCapituloArrayImagen = NSFetchRequest<NSManagedObject>(entityName: "ImagenesCapituloEntity")
+                    fetchRequestCapituloArrayImagen.predicate = NSPredicate(format: "capituloProcedente=%@", capitulo)
                     
+                    let imagenesCapitulos = try managedContext.fetch(fetchRequestCapituloArrayImagen)
                     
+                    for imagen in imagenesCapitulos {
+                        if let imageData = imagen.value(forKey: "imagen") as? NSData {
+                            if let image = UIImage(data: Data(referencing: imageData)) {
+                                fotoAux = image
+                            }
+                        }
+                        
+                        consultaInternaImagenes.append(fotoAux!)
+                    }
                     
-                    
-                    consultaInternaCapitulo.append(Capitulo(nombre: capitulo.value(forKey: "nombre") as! String, estado: capitulosVistos.contains(capitulo), imagenes: [], numero: capitulo.value(forKey: "numero") as! Int)!)
+                    consultaInternaCapitulo.append(Capitulo(nombre: capitulo.value(forKey: "nombre") as! String, estado: capitulosVistos.contains(capitulo), imagenes: consultaInternaImagenes, numero: capitulo.value(forKey: "numero") as! Int)!)
                     
                 }
                 
@@ -83,7 +101,8 @@ class LibroNSObject: NSObject {
                     }
                 }
                 
-                resultado.append(Libro(nombre: libro.value(forKey: "nombre") as! String, foto: fotoAux, autor:  libro.value(forKey: "autor") as! String,definicion: libro.value(forKey: "definicion") as! String, listaCapitulos: nil, estado: -1)!)
+                resultado.append(Libro(nombre: libro.value(forKey: "nombre") as! String, foto: fotoAux, autor:  libro.value(forKey: "autor") as! String,definicion: libro.value(forKey: "definicion") as! String, listaCapitulos: consultaInternaCapitulo, estado: 3)!)
+                //falta relacion libro/user, porque falta user
             }
             
             return resultado

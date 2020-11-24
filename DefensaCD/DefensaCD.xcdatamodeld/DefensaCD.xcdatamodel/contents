@@ -13,7 +13,7 @@
         <relationship name="estadoUsuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="estadoLibro" inverseEntity="UsuarioEntity" syncable="YES"/>
     </entity>
     <entity name="ImagenesCapituloEntity" representedClassName="ImagenesCapituloEntity" syncable="YES" codeGenerationType="class">
-        <attribute name="imagenes" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
         <relationship name="capituloProcedente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CapituloEntity" inverseName="imagenes" inverseEntity="CapituloEntity" syncable="YES"/>
     </entity>
     <entity name="LibroEntity" representedClassName="LibroEntity" syncable="YES" codeGenerationType="class">

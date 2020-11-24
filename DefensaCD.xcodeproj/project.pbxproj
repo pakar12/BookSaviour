@@ -23,6 +23,8 @@
 		1590B5042565612A00C691B6 /* LeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B5012565612900C691B6 /* LeerViewController.swift */; };
 		1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */; };
 		15FD101C256C70CF001FA354 /* LibroNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD101B256C70CF001FA354 /* LibroNSObject.swift */; };
+		15FD101E256C9C7C001FA354 /* CapituloNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD101D256C9C7C001FA354 /* CapituloNSObject.swift */; };
+		15FD1020256C9F1E001FA354 /* ImagenNSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FD101F256C9F1E001FA354 /* ImagenNSObject.swift */; };
 		15FDD0112565BC3800226D7B /* Libro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15FDD0102565BC3800226D7B /* Libro.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		1590B5012565612900C691B6 /* LeerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeerViewController.swift; sourceTree = "<group>"; };
 		1590B50525656CA700C691B6 /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
 		15FD101B256C70CF001FA354 /* LibroNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibroNSObject.swift; sourceTree = "<group>"; };
+		15FD101D256C9C7C001FA354 /* CapituloNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapituloNSObject.swift; sourceTree = "<group>"; };
+		15FD101F256C9F1E001FA354 /* ImagenNSObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenNSObject.swift; sourceTree = "<group>"; };
 		15FDD0102565BC3800226D7B /* Libro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Libro.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				15FD101B256C70CF001FA354 /* LibroNSObject.swift */,
+				15FD101D256C9C7C001FA354 /* CapituloNSObject.swift */,
+				15FD101F256C9F1E001FA354 /* ImagenNSObject.swift */,
 			);
 			path = DataBaseModels;
 			sourceTree = "<group>";
@@ -312,6 +318,7 @@
 			files = (
 				157125F0256A8CA800DC79AE /* ListaLibrosViewController.swift in Sources */,
 				153E8C9325696CC000C73120 /* Capitulo.swift in Sources */,
+				15FD1020256C9F1E001FA354 /* ImagenNSObject.swift in Sources */,
 				1590B4D12565555300C691B6 /* LoginViewController.swift in Sources */,
 				1590B4D72565555300C691B6 /* DefensaCD.xcdatamodeld in Sources */,
 				1590B4CF2565555300C691B6 /* AppDelegate.swift in Sources */,
@@ -320,6 +327,7 @@
 				15093294256736A700912296 /* TableViewCellLibro.swift in Sources */,
 				153E8C8F25693C7300C73120 /* TableViewCellCapitulo.swift in Sources */,
 				1590B5032565612A00C691B6 /* LibroViewController.swift in Sources */,
+				15FD101E256C9C7C001FA354 /* CapituloNSObject.swift in Sources */,
 				15FDD0112565BC3800226D7B /* Libro.swift in Sources */,
 				1590B50625656CA700C691B6 /* CrearCuentaViewController.swift in Sources */,
 			);
