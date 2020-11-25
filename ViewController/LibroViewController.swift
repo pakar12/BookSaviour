@@ -95,7 +95,7 @@ extension LibroViewController: UITableViewDataSource, UITableViewDelegate{
         
         
         cell.estado.image = libro!.listaCapitulos[indexPath.row].tipoVisto()
-        cell.numero.text = "\(String(describing: libro!.listaCapitulos[indexPath.row].numero))"
+        cell.numero.text = "Numero: " + "\(String(describing: libro!.listaCapitulos[indexPath.row].numero))"
         cell.nombre.text = libro?.listaCapitulos[indexPath.row].nombre
         return cell
     }
