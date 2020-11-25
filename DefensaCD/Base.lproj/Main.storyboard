@@ -316,7 +316,7 @@ EG5vbWJyZQ
                                                                     <color key="textColor" red="0.93952661749999999" green="0.99843806030000004" blue="0.98424905539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24b-HG-ssl" userLabel="puntuacion">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="24b-HG-ssl" userLabel="puntuacion">
                                                                     <rect key="frame" x="0.0" y="40.5" width="242" height="3"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" red="0.93952661749999999" green="0.99843806030000004" blue="0.98424905539999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
