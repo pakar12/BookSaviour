@@ -25,6 +25,10 @@ class CrearCuentaViewController: UIViewController {
         incorrecto.isHidden = true
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        incorrecto.isHidden = true
+    }
+    
     @IBAction func atras(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

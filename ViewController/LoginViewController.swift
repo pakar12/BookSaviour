@@ -28,6 +28,9 @@ class LoginViewController: UIViewController {
         return UsuarioNSObject().login(username: username.text!, password: password.text!)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        mensajeIncorrecto.isHidden = true
+    }
    
     @IBAction func loginButtonTapped(_ sender: Any) {
         let _ = shouldPerformSegue(withIdentifier: "loginSegue", sender: nil)
