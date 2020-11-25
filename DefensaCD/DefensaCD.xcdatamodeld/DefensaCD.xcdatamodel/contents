@@ -3,14 +3,14 @@
     <entity name="CapituloEntity" representedClassName="CapituloEntity" syncable="YES" codeGenerationType="class">
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
-        <relationship name="imagenes" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ImagenesCapituloEntity" inverseName="capituloProcedente" inverseEntity="ImagenesCapituloEntity" syncable="YES"/>
+        <relationship name="imagenes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImagenesCapituloEntity" inverseName="capituloProcedente" inverseEntity="ImagenesCapituloEntity" syncable="YES"/>
         <relationship name="libroProcedente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="LibroEntity" inverseName="capitulos" inverseEntity="LibroEntity" syncable="YES"/>
         <relationship name="usuarioVisor" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstadoUsuarioCapitulo" inverseName="estadoCapitulo" inverseEntity="EstadoUsuarioCapitulo" syncable="YES"/>
     </entity>
     <entity name="EstadoUsuarioCapitulo" representedClassName="EstadoUsuarioCapitulo" syncable="YES" codeGenerationType="class">
         <attribute name="estado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="estadoCapitulo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CapituloEntity" inverseName="usuarioVisor" inverseEntity="CapituloEntity" syncable="YES"/>
-        <relationship name="estadoUsuarioCapitulo" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="capitulosVistos" inverseEntity="UsuarioEntity" syncable="YES"/>
+        <relationship name="usuarioVisor" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="UsuarioEntity" inverseName="capitulosVistos" inverseEntity="UsuarioEntity" syncable="YES"/>
     </entity>
     <entity name="EstadoUsuarioLibro" representedClassName="EstadoUsuarioLibro" syncable="YES" codeGenerationType="class">
         <attribute name="estado" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
@@ -32,7 +32,7 @@
     <entity name="UsuarioEntity" representedClassName="UsuarioEntity" syncable="YES" codeGenerationType="class">
         <attribute name="password" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="capitulosVistos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstadoUsuarioCapitulo" inverseName="estadoUsuarioCapitulo" inverseEntity="EstadoUsuarioCapitulo" syncable="YES"/>
+        <relationship name="capitulosVistos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstadoUsuarioCapitulo" inverseName="usuarioVisor" inverseEntity="EstadoUsuarioCapitulo" syncable="YES"/>
         <relationship name="estadoLibro" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EstadoUsuarioLibro" inverseName="estadoUsuario" inverseEntity="EstadoUsuarioLibro" syncable="YES"/>
     </entity>
     <elements>

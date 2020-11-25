@@ -36,23 +36,24 @@ class ListaLibroViewController: UIViewController{
         tabBar.selectedItem = tabBar.items?[0]
         
         //Datos
-        var  listaCapitulos = [Capitulo]()
+        //var  listaCapitulos = [Capitulo]()
         
-        let capitulo1 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 3)
+        let capituloBraco = Capitulo(nombre: "Braco", estado: 1, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 3)
 
-        let capitulo2 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo3 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo4 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo5 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo6 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        let capitulo7 = Capitulo(nombre: "El bolsillo magico de donramon", estado: 1, imagenes: [UIImage(named: "nikodemo")!], numero: 1)
-        listaCapitulos += [capitulo1!, capitulo2!, capitulo3!, capitulo4!, capitulo5!, capitulo6!, capitulo7!]
+        let pitagoras1 = Capitulo(nombre: "planteamiento del problema", estado: 1, imagenes: [UIImage(named: "leer")!], numero: 1)
+        let pitagoras2 = Capitulo(nombre: "resolicion temporal", estado: 1, imagenes: [UIImage(named: "pendiente")!], numero: 2)
+        let pitagoras3 = Capitulo(nombre: "segundo planteamiento", estado: 1, imagenes: [UIImage(named: "lupa")!], numero: 3)
         
-        let libro1 = Libro(nombre: "Las desventuras de JJ P", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 3)
+        let RowStreet1 = Capitulo(nombre: "Elmo compra hilo", estado: 1, imagenes: [UIImage(named: "flechaAtras")!], numero: 1)
+        let RowStreet2 = Capitulo(nombre: "Elmo enebra la aguja", estado: 1, imagenes: [UIImage(named: "no-visto")!], numero: 1)
+        let RowStreet3 = Capitulo(nombre: "Elmo no tiene dedos", estado: 1, imagenes: [UIImage(named: "visto")!], numero: 1)
         
-        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 2)
         
-        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "El desafortunado JJ", definicion: "owo", listaCapitulos: listaCapitulos, estado: 1)
+        let libro1 = Libro(nombre: "Braco", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", definicion: "La despedida de nuestro gran pequeño Braco", listaCapitulos: [capituloBraco!], estado: 3)
+        
+        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "Astor el mecanico", definicion: "Pitagoras se enfrenta a un problema de la edad moderna", listaCapitulos: [pitagoras1!, pitagoras2!, pitagoras3!], estado: 2)
+        
+        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "Elmo el sastre", definicion: "A Elmo le gusta coser", listaCapitulos: [RowStreet1!, RowStreet2!, RowStreet3!], estado: 1)
         
         //libros += [libro1!, libro2!, libro3!]
         /*
@@ -60,7 +61,8 @@ class ListaLibroViewController: UIViewController{
  
         let _ = LibroNSObject.init(libro: libro2!)
         let _ = LibroNSObject.init(libro: libro3!)
-    */
+        */
+        
         libros = (LibroNSObject().consultarLibros(id_usuario: usuario)!)
         
         busqueda()

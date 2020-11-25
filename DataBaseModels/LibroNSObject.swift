@@ -66,12 +66,9 @@ class LibroNSObject: NSObject {
                 fetchRequestCapitulos.predicate = NSPredicate(format: "libroProcedente=%@", libro)
                 let capitulos = try managedContext.fetch(fetchRequestCapitulos)
                 
-                //Todos los capitulos marcados x este user
-                let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioCapitulo")
-                fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "estadoUsuarioCapitulo=%@ and estado=%@", usuario, "2")
                 
-                let capitulosVistos = try managedContext.fetch(fetchRequestEstadoCapitulo)
                 
+                consultaInternaCapitulo.removeAll()
                 for capitulo in capitulos {
                     
                     //hueco para el array de imagenes y para llorar juntos
@@ -79,8 +76,9 @@ class LibroNSObject: NSObject {
                     fetchRequestCapituloArrayImagen.predicate = NSPredicate(format: "capituloProcedente=%@", capitulo)
                     
                     let imagenesCapitulos = try managedContext.fetch(fetchRequestCapituloArrayImagen)
-                    
+                    consultaInternaImagenes.removeAll()
                     for imagen in imagenesCapitulos {
+                        
                         if let imageData = imagen.value(forKey: "imagen") as? NSData {
                             if let image = UIImage(data: Data(referencing: imageData)) {
                                 fotoAux = image
@@ -89,8 +87,15 @@ class LibroNSObject: NSObject {
                         
                         consultaInternaImagenes.append(fotoAux!)
                     }
+                    
+                    //Todos los capitulos marcados x este user
+                    let fetchRequestEstadoCapitulo = NSFetchRequest<NSManagedObject>(entityName: "EstadoUsuarioCapitulo")
+                    fetchRequestEstadoCapitulo.predicate = NSPredicate(format: "usuarioVisor=%@ and estado=%d and estadoCapitulo=%@", usuario, 2, capitulo)
+                    
+                    let capitulosVistos = try managedContext.fetch(fetchRequestEstadoCapitulo)
+                    
                     var capVisto = 1
-                    if(capitulosVistos.contains(capitulo)){
+                    if(capitulosVistos.count > 0){
                         capVisto = 2
                     }
                     

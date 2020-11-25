@@ -30,9 +30,9 @@ class Capitulo{
     
     func tipoVisto() -> UIImage{
         if(estado == 1){
-            return UIImage(named: "visto")!
+            return UIImage(named: "no-visto")!//ojo cerrao
         } else {
-            return UIImage(named: "no-visto")!
+            return UIImage(named: "visto")!//ojo abierto
         }
         
     }

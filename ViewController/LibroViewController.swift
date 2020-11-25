@@ -16,7 +16,6 @@ class LibroViewController: UIViewController{
     @IBOutlet weak var imagen: UIImageView!
     @IBOutlet weak var nombreLibro: UILabel!
     @IBOutlet weak var autorLibro: UILabel!
-    @IBOutlet weak var notaMedia: UILabel!
     
     @IBOutlet weak var descripcion: UILabel!
     
@@ -34,7 +33,7 @@ class LibroViewController: UIViewController{
         self.imagen.image = libro?.foto
         self.nombreLibro.text = libro?.nombre
         self.autorLibro.text = libro?.autor
-        //self.notaMedia.text = libro?.notaMedia + ""
+        self.descripcion.text = libro?.definicion
         estadoLibro()
 
     }
@@ -83,6 +82,7 @@ class LibroViewController: UIViewController{
         viewDestiny.imageArray = (libro?.listaCapitulos[selectedRow!].imagenes)!
         
         libro?.listaCapitulos[selectedRow!].verCapitulo()
+        CapituloNSObject().updateStateCapitulo(usuario: usuario, capitulo: (libro?.listaCapitulos[selectedRow!])!, estado: 2) 
     }
 
 }
