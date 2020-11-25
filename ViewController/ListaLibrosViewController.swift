@@ -35,33 +35,9 @@ class ListaLibroViewController: UIViewController{
         tabBar.delegate = self
         tabBar.selectedItem = tabBar.items?[0]
         
-        //Datos
-        //var  listaCapitulos = [Capitulo]()
-        
-        let capituloBraco = Capitulo(nombre: "Braco", estado: 1, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 3)
-
-        let pitagoras1 = Capitulo(nombre: "planteamiento del problema", estado: 1, imagenes: [UIImage(named: "leer")!], numero: 1)
-        let pitagoras2 = Capitulo(nombre: "resolicion temporal", estado: 1, imagenes: [UIImage(named: "pendiente")!], numero: 2)
-        let pitagoras3 = Capitulo(nombre: "segundo planteamiento", estado: 1, imagenes: [UIImage(named: "lupa")!], numero: 3)
-        
-        let RowStreet1 = Capitulo(nombre: "Elmo compra hilo", estado: 1, imagenes: [UIImage(named: "flechaAtras")!], numero: 1)
-        let RowStreet2 = Capitulo(nombre: "Elmo enebra la aguja", estado: 1, imagenes: [UIImage(named: "no-visto")!], numero: 1)
-        let RowStreet3 = Capitulo(nombre: "Elmo no tiene dedos", estado: 1, imagenes: [UIImage(named: "visto")!], numero: 1)
-        
-        
-        let libro1 = Libro(nombre: "Braco", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", definicion: "La despedida de nuestro gran pequeño Braco", listaCapitulos: [capituloBraco!], estado: 3)
-        
-        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "Astor el mecanico", definicion: "Pitagoras se enfrenta a un problema de la edad moderna", listaCapitulos: [pitagoras1!, pitagoras2!, pitagoras3!], estado: 2)
-        
-        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "Elmo el sastre", definicion: "A Elmo le gusta coser", listaCapitulos: [RowStreet1!, RowStreet2!, RowStreet3!], estado: 1)
-        
-        //libros += [libro1!, libro2!, libro3!]
-        /*
-        let _ = LibroNSObject.init(libro: libro1!)
- 
-        let _ = LibroNSObject.init(libro: libro2!)
-        let _ = LibroNSObject.init(libro: libro3!)
-        */
+        if(LibroNSObject().bookIsEmpty()){
+            fillBooks()
+        }
         
         libros = (LibroNSObject().consultarLibros(id_usuario: usuario)!)
         
@@ -79,7 +55,37 @@ class ListaLibroViewController: UIViewController{
         viewDestiny.usuario = self.usuario
     }
     
-    
+    func fillBooks(){
+        //Datos
+        //var  listaCapitulos = [Capitulo]()
+        
+        let capituloBraco = Capitulo(nombre: "Braco", estado: 1, imagenes: [UIImage(named: "nikodemo")!, UIImage(named: "Braco intro 1")!, UIImage(named: "Braco intro 2")!], numero: 1)
+        
+        let pitagoras1 = Capitulo(nombre: "planteamiento del problema", estado: 1, imagenes: [UIImage(named: "leer")!], numero: 1)
+        let pitagoras2 = Capitulo(nombre: "resolicion temporal", estado: 1, imagenes: [UIImage(named: "pendiente")!], numero: 2)
+        let pitagoras3 = Capitulo(nombre: "segundo planteamiento", estado: 1, imagenes: [UIImage(named: "lupa")!], numero: 3)
+        
+        let RowStreet1 = Capitulo(nombre: "Elmo compra hilo", estado: 1, imagenes: [UIImage(named: "flechaAtras")!], numero: 1)
+        let RowStreet2 = Capitulo(nombre: "Elmo enebra la aguja", estado: 1, imagenes: [UIImage(named: "no-visto")!], numero: 2)
+        let RowStreet3 = Capitulo(nombre: "Elmo no tiene dedos", estado: 1, imagenes: [UIImage(named: "visto")!], numero: 3)
+        
+        
+        let libro1 = Libro(nombre: "Braco", foto: UIImage(named: "nikodemo")!, autor: "El desafortunado JJ", definicion: "La despedida de nuestro gran pequeño Braco", listaCapitulos: [capituloBraco!], estado: 3)
+        
+        let libro2 = Libro(nombre: "El misterio de pitagoras", foto: UIImage(named: "IconoDefensaGD")!, autor: "Astor el mecanico", definicion: "Pitagoras se enfrenta a un problema de la edad moderna", listaCapitulos: [pitagoras1!, pitagoras2!, pitagoras3!], estado: 2)
+        
+        let libro3 = Libro(nombre: "Row Street", foto: UIImage(named: "emptyStar")!, autor: "Elmo el sastre", definicion: "A Elmo le gusta coser", listaCapitulos: [RowStreet1!, RowStreet2!, RowStreet3!], estado: 1)
+        
+        //libros += [libro1!, libro2!, libro3!]
+        
+        let _ = LibroNSObject.init(libro: libro1!)
+        
+        let _ = LibroNSObject.init(libro: libro2!)
+        let _ = LibroNSObject.init(libro: libro3!)
+        
+        
+        
+    }
 }
 
 extension ListaLibroViewController: UITableViewDataSource, UITableViewDelegate{

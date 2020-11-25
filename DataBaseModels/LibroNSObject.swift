@@ -57,6 +57,10 @@ class LibroNSObject: NSObject {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LibroEntity")
         
         do {
+            
+            let sortLibro = NSSortDescriptor(key: "nombre", ascending: true)
+            fetchRequest.sortDescriptors = [sortLibro]
+            
             let libros = try managedContext.fetch(fetchRequest)
             
             let usuario = try managedContext .existingObject(with: id_usuario)
@@ -64,6 +68,8 @@ class LibroNSObject: NSObject {
                 
                 let fetchRequestCapitulos = NSFetchRequest<NSManagedObject>(entityName: "CapituloEntity")
                 fetchRequestCapitulos.predicate = NSPredicate(format: "libroProcedente=%@", libro)
+                let sortChapter = NSSortDescriptor(key: "numero", ascending: true)
+                fetchRequestCapitulos.sortDescriptors = [sortChapter]
                 let capitulos = try managedContext.fetch(fetchRequestCapitulos)
                 
                 
@@ -74,6 +80,9 @@ class LibroNSObject: NSObject {
                     //hueco para el array de imagenes y para llorar juntos
                     let fetchRequestCapituloArrayImagen = NSFetchRequest<NSManagedObject>(entityName: "ImagenesCapituloEntity")
                     fetchRequestCapituloArrayImagen.predicate = NSPredicate(format: "capituloProcedente=%@", capitulo)
+                    
+                    let sortImagen = NSSortDescriptor(key: "numero", ascending: true)
+                    fetchRequestCapituloArrayImagen.sortDescriptors = [sortImagen]
                     
                     let imagenesCapitulos = try managedContext.fetch(fetchRequestCapituloArrayImagen)
                     consultaInternaImagenes.removeAll()
@@ -213,5 +222,26 @@ class LibroNSObject: NSObject {
         return false
     }
     
+    func bookIsEmpty() -> Bool
+    {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return false}
+        
+        let managedContext = appDelegate.persistentContainer.viewContext
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "LibroEntity")
+        
+        do {
+            
+            if try managedContext.fetch(fetchRequest).count < 1{
+                return true
+            }else{
+                return false
+            }
+        } catch let error as NSError {
+            print("Could not fetch. \(error), \(error.userInfo)")
+        }
+        
+        return false
+        
+    }
 
 }

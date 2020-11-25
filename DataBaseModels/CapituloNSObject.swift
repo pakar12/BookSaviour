@@ -26,9 +26,10 @@ class CapituloNSObject: NSObject {
         
         insercion.setValue(capitulo.nombre , forKeyPath: "nombre")
         insercion.setValue(capitulo.numero, forKeyPath: "numero")
-            
+        var contador: Int = 0;
         for imagen in capitulo.imagenes {
-            let _ = ImagenNSObject.init(imagen: imagen, capitulo: insercion)
+            let _ = ImagenNSObject.init(imagen: imagen, capitulo: insercion, indice: contador)
+            contador = contador + 1
         }
         
         insercion.setValue(libro, forKey: "libroProcedente")

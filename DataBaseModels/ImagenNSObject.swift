@@ -14,7 +14,7 @@ class ImagenNSObject: NSObject {
         super.init()
     }
     
-    init?(imagen: UIImage, capitulo: NSManagedObject){
+    init?(imagen: UIImage, capitulo: NSManagedObject, indice: Int){
         super.init()
         
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {return}
@@ -24,7 +24,7 @@ class ImagenNSObject: NSObject {
         let insercion = NSManagedObject(entity: entity, insertInto: managedContext)
 
         insercion.setValue(imagen.pngData()!, forKey: "imagen")
- 
+        insercion.setValue(indice, forKey: "numero")
         insercion.setValue(capitulo, forKey: "capituloProcedente")
         
     }

@@ -19,6 +19,7 @@
     </entity>
     <entity name="ImagenesCapituloEntity" representedClassName="ImagenesCapituloEntity" syncable="YES" codeGenerationType="class">
         <attribute name="imagen" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="numero" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="capituloProcedente" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CapituloEntity" inverseName="imagenes" inverseEntity="CapituloEntity" syncable="YES"/>
     </entity>
     <entity name="LibroEntity" representedClassName="LibroEntity" syncable="YES" codeGenerationType="class">
@@ -37,10 +38,10 @@
     </entity>
     <elements>
         <element name="CapituloEntity" positionX="70.90625" positionY="-218.92578125" width="128" height="120"/>
+        <element name="EstadoUsuarioCapitulo" positionX="143.96484375" positionY="-55.03515625" width="128" height="90"/>
         <element name="EstadoUsuarioLibro" positionX="-192.05859375" positionY="130" width="128" height="90"/>
-        <element name="ImagenesCapituloEntity" positionX="-38.00390625" positionY="-16.0390625" width="128" height="75"/>
+        <element name="ImagenesCapituloEntity" positionX="-38.00390625" positionY="-16.0390625" width="128" height="90"/>
         <element name="LibroEntity" positionX="-196.0625" positionY="-213.984375" width="128" height="135"/>
         <element name="UsuarioEntity" positionX="105.9921875" positionY="70.984375" width="128" height="105"/>
-        <element name="EstadoUsuarioCapitulo" positionX="143.96484375" positionY="-55.03515625" width="128" height="90"/>
     </elements>
 </model>
